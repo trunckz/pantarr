@@ -118,11 +118,17 @@ addresses). Leave the others unticked. Certify the three statements (no sale, no
 
 ## 6. Notes for reviewers (both stores, private field)
 
+The test account is made with a single-use invitation code (Administration → Invitation codes), its address checked
+by an administrator. Keep its password out of the repository.
+
 ```
 Pantarr is a self-hostable meal planner (AGPL, https://github.com/trunckz/pantarr). The extension needs a Pantarr
-account; a test account on our beta instance:
-  address: <TO FILL: beta address>    invitation code: <TO FILL>    (sign up, then Settings → Connectors →
-  Browser extension → "Get a code", type the address and the code in the extension window)
+account; a ready test account on our beta instance (household set up, 8 items in the online list, stores enabled):
+  address: <TO FILL: beta address>    e-mail: <TO FILL>    password: <TO FILL>
+  1. Sign in at the address, then Settings → Connectors → Browser extension → "Get a code" (valid 10 minutes).
+  2. In the extension window, type the address and the code → "Extension connected".
+  3. Recipes: open any Marmiton recipe page → "Ajouter à Pantarr" → the recipe appears in Pantarr → Recipes.
+  4. Basket: Shopping list → "Send to the online store" → the store site opens with the Pantarr panel.
 
 - stores/*.js run in the page ("world": "MAIN") on the grocery sites only: the sites call their own APIs with tokens
   held by the page, which an isolated content script cannot reuse. They receive the Pantarr address and key from
@@ -131,8 +137,8 @@ account; a test account on our beta instance:
   first (esc() / echap(): & < > " replaced).
 - Network calls go only to the Pantarr address typed by the user and to the store site itself. No remote code,
   no analytics.
-- Testing the basket needs a customer account on one of the grocery sites; recipes can be tested without one
-  (e.g. any Marmiton recipe page → "Ajouter à Pantarr").
+- Matching products works without a store account; adding to the basket may ask to sign in on the store site.
+  Receipts (Lidl Plus, Intermarché) need a customer account with purchases and cannot be tested with a fresh one.
 ```
 
 ## 7. After publication
