@@ -1,6 +1,6 @@
 // Browser extension card: install it (Chrome, Firefox), connect it with a code, choose the household's stores (online
 // basket filled from Pantarr, Lidl Plus receipts read). Replaces the userscripts for everyone.
-import { Alert, Anchor, Badge, Button, Card, Code, Group, Stack, Switch, Text } from "@mantine/core";
+import { Alert, Anchor, Badge, Button, Card, Code, CopyButton, Group, Stack, Switch, Text } from "@mantine/core";
 import { notifications } from "@mantine/notifications";
 import { IconBrandChrome, IconBrandFirefox, IconDownload, IconPuzzle } from "@tabler/icons-react";
 import { useQuery } from "@tanstack/react-query";
@@ -43,7 +43,12 @@ export default function Extension({ household, states, onChange }: { household: 
               {me.data?.role === "ADMIN" && <Anchor size="sm" href="/api/v1/extension/pantarr-extension.zip"><IconDownload size={12} /> {t("extension.download")}</Anchor>}</Alert>}
         <Text size="sm" fw={500}>2. {t("extension.connect")}</Text>
         {code
-          ? <Group gap="xs"><Code fz="xl" style={{ letterSpacing: 2 }}>{code}</Code><Text size="xs" c="dimmed">{t("extension.codeHelp")}</Text></Group>
+          ? <Stack gap={4}>
+              {/* the extension of the browser stores knows no Pantarr: the address goes with the code */}
+              <Group gap="xs"><Text size="sm">{t("extension.address")}</Text><Code fz="sm">{window.location.origin}</Code><CopyButton value={window.location.origin}>
+                {({ copied, copy }) => <Button size="compact-xs" variant="subtle" onClick={copy}>{t(copied ? "extension.copied" : "extension.copy")}</Button>}</CopyButton></Group>
+              <Group gap="xs"><Code fz="xl" style={{ letterSpacing: 2 }}>{code}</Code><Text size="xs" c="dimmed">{t("extension.codeHelp")}</Text></Group>
+            </Stack>
           : <Group><Button size="xs" variant="light" onClick={getCode}>{t("extension.getCode")}</Button></Group>}
         <Text size="sm" fw={500}>3. {t("extension.stores")}</Text>
         <Stack gap={4}>

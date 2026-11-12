@@ -18,12 +18,18 @@ export function configureApp(app: NestExpressApplication): void {
   app.useGlobalPipes(new ValidationPipe({ whitelist: true, transform: true }));
 }
 
+const EXTENSION_ROUTES = ["/api/v1/extension/pair", "/api/v1/auth/me"];
+const EXTENSION_ORIGIN = /^(chrome-extension|moz-extension|safari-web-extension):\/\/[a-z0-9-]+$/i;
+
 /** CORS for the browser bridge: only the sites of the store connectors (and of recipes, to import them), only on /api/v1/bridge/. */
 export function bridgeCors(req: Request, res: Response, next: NextFunction) {
   const origin = String(req.headers.origin ?? "");
   // the store sites on every bridge route ; the recipe sites only for importing recipes
   const recipes = req.path.startsWith("/api/v1/bridge/recipes/") && recipeOrigins().includes(origin);
-  if (req.path.startsWith("/api/v1/bridge/") && (allowedOrigin(origin) || recipes)) {
+  // the window of the extension (installed from a browser store, it has no access to this address): connecting with
+  // the code, and checking its key ; no cookie is sent or accepted (no Allow-Credentials)
+  const extension = EXTENSION_ROUTES.includes(req.path) && EXTENSION_ORIGIN.test(origin);
+  if (extension || (req.path.startsWith("/api/v1/bridge/") && (allowedOrigin(origin) || recipes))) {
     res.setHeader("Access-Control-Allow-Origin", origin);
     res.setHeader("Vary", "Origin");
     res.setHeader("Access-Control-Allow-Headers", "Authorization, Content-Type");

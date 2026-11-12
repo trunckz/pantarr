@@ -1,0 +1,36 @@
+# Archives of the browser extension for the stores (docs/extension/stores.md): on a tag extension-v<version>, both
+# archives are built from the sources and attached to a GitHub release ; by hand, they are kept as workflow artifacts.
+name: Extension
+on:
+  push:
+    tags: ["extension-v*"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  pack:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: npm }
+      - run: npm ci --no-audit --no-fund
+      - name: Archives
+        run: npm run extension:pack
+      - name: The tag names the version of the manifest
+        if: startsWith(github.ref, 'refs/tags/')
+        run: |
+          v=$(grep -oP 'EXTENSION_VERSION = "\K[^"]+' apps/api/src/extension/extension.ts)
+          test "extension-v$v" = "${GITHUB_REF_NAME}" || { echo "tag ${GITHUB_REF_NAME}, extension $v"; exit 1; }
+      - name: Firefox checks (web-ext lint)
+        run: |
+          mkdir -p /tmp/ff && cd /tmp/ff && unzip -q "$GITHUB_WORKSPACE"/dist/extension/*-firefox.zip
+          npx --yes web-ext@8 lint -s /tmp/ff
+      - uses: actions/upload-artifact@v4
+        with: { name: pantarr-extension, path: dist/extension/*.zip }
+      - name: Release
+        if: startsWith(github.ref, 'refs/tags/')
+        env: { GH_TOKEN: "${{ github.token }}" }
+        run: gh release create "$GITHUB_REF_NAME" dist/extension/*.zip --title "Extension $GITHUB_REF_NAME" --notes "Archives for the Chrome Web Store and Firefox Add-ons (docs/extension/stores.md)."

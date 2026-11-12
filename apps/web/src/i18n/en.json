@@ -831,5 +831,8 @@
   "feedback.send": "Send",
   "feedback.sent": "Thank you! Ticket #{{number}} is open.",
   "feedback.follow": "Follow the ticket",
-  "feedback.close": "Close"
+  "feedback.close": "Close",
+  "extension.address": "Pantarr address:",
+  "extension.copy": "Copy",
+  "extension.copied": "Copied"
 }

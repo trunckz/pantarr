@@ -65,6 +65,8 @@ npm run lint                # ESLint ; npm test: unit tests (API: Jest, web: Vit
 # end-to-end tests: DATABASE_URL=postgresql://…/pantarr_test npm run test:e2e -w @pantarr/api
 ```
 
+Browser extension archives for the stores: `npm run extension:pack` ([docs/extension/stores.md](docs/extension/stores.md)).
+
 Monorepo: `apps/api` (NestJS, Prisma, PostgreSQL), `apps/web` (React, Mantine, i18next),
 `packages/connector-sdk` (connector contracts). Architecture: [docs/architecture.md](docs/architecture.md);
 writing a connector: [docs/connectors.md](docs/connectors.md).

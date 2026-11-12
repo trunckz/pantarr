@@ -831,5 +831,8 @@
   "feedback.send": "Envoyer",
   "feedback.sent": "Merci ! Le ticket n° {{number}} est ouvert.",
   "feedback.follow": "Suivre le ticket",
-  "feedback.close": "Fermer"
+  "feedback.close": "Fermer",
+  "extension.address": "Adresse de Pantarr :",
+  "extension.copy": "Copier",
+  "extension.copied": "Copiée"
 }

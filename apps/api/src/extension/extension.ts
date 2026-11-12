@@ -9,7 +9,9 @@ import { config } from "../config";
 import { IMPLEMENTED } from "../connectors/connectors.service";
 import { RECIPE_SITES } from "../recipes/recipe-sites";
 
-export const EXTENSION_VERSION = "1.3.1";
+export const EXTENSION_VERSION = "1.4.0";
+
+const ICONS = { 16: "icons/icon-16.png", 32: "icons/icon-32.png", 48: "icons/icon-48.png", 128: "icons/icon-128.png" };
 
 const API = "@@PANTARR_API@@", KEY = "@@PANTARR_KEY@@", HOUSEHOLD = "PANTARRHOUSEHOLD";
 
@@ -42,8 +44,16 @@ ${body}
 /** Content patterns of the origins of a connector (« https://*.leclercdrive.fr » → « https://*.leclercdrive.fr/* »). */
 const matchesOf = (origins: string[]) => origins.map((o) => `${o.replace(/\/$/, "")}/*`);
 
-/** Files of the extension: manifest, popup, configuration bridge, one script per store. */
-export function extensionFiles(base = config.baseUrl): Record<string, Buffer> {
+/** Browsers an archive is made for: « any » (loaded by hand, or this instance's download) keeps every key. */
+export type ExtensionTarget = "any" | "chrome" | "firefox";
+
+/** What the extension sends, for Firefox's data consent (shown at install): the content of the store pages (basket,
+ * products) and of the recipe pages, and the purchases (receipts), always to the user's own Pantarr. */
+export const DATA_COLLECTION = { required: ["websiteContent", "financialAndPaymentInfo"] };
+
+/** Files of the extension: manifest, popup, configuration bridge, one script per store. `base` is the Pantarr the
+ * extension talks to by default ; empty (store build for everyone) : the user types the address of their Pantarr. */
+export function extensionFiles(base: string = config.baseUrl, target: ExtensionTarget = "any"): Record<string, Buffer> {
   const dir = join(__dirname, "static");
   const files: Record<string, Buffer> = {};
   const scripts: { matches: string[]; js: string[]; run_at: string; world: string }[] = [];
@@ -60,24 +70,22 @@ export function extensionFiles(base = config.baseUrl): Record<string, Buffer> {
   const recipeMatches = RECIPE_SITES.flatMap((x) => matchesOf(x.origins));
   files["recipes.js"] = Buffer.from(readFileSync(join(dir, "recipes.js"), "utf8").replace("const SITES = __RECIPE_SITES__;", () => `const SITES = ${JSON.stringify(RECIPE_SITES)};`));
   recipeMatches.forEach((m) => all.add(m));
-  const origin = new URL(base).origin;
+  const origin = base ? new URL(base).origin : "";
   const manifest = {
     manifest_version: 3, name: "Pantarr", version: EXTENSION_VERSION,
     description: "Pantarr: fills your online grocery basket from your Pantarr shopping list, adds recipes from recipe sites, and sends your Lidl Plus receipts to Pantarr.",
-    icons: { 128: "icon.png" }, action: { default_popup: "popup.html", default_icon: { 128: "icon.png" } },
+    icons: ICONS, action: { default_popup: "popup.html", default_icon: ICONS },
     permissions: ["storage"],
-    host_permissions: [...all, `${origin}/*`],
-    optional_host_permissions: ["https://*/*", "http://*/*"],
+    host_permissions: [...all, ...(origin ? [`${origin}/*`] : [])],
     content_scripts: [{ matches: [...all], js: ["bridge.js"], run_at: "document_start" }, ...scripts,
       { matches: recipeMatches, js: ["recipes.js"], run_at: "document_idle" }],
-    browser_specific_settings: { gecko: { id: "extension@pantarr.app", strict_min_version: "128.0" } },
+    ...(target === "chrome" ? {} : { browser_specific_settings: { gecko: { id: "extension@pantarr.app", strict_min_version: "140.0", data_collection_permissions: DATA_COLLECTION } } }),
   };
   files["manifest.json"] = Buffer.from(JSON.stringify(manifest, null, 2));
   files["bridge.js"] = readFileSync(join(dir, "bridge.js"));
   files["popup.html"] = readFileSync(join(dir, "popup.html"));
   files["popup.js"] = Buffer.from(readFileSync(join(dir, "popup.js"), "utf8").replace("__DEFAULT_BASE__", origin));
-  files["icon.png"] = [join(config.webDist, "icon-192.png"), join(__dirname, "../../../web/public/icon-192.png")]
-    .map((p): Buffer | null => { try { return readFileSync(p); } catch { return null; } }).find((x) => x !== null) ?? Buffer.alloc(0);
+  for (const f of Object.values(ICONS)) files[f] = readFileSync(join(dir, f));
   return files;
 }
 

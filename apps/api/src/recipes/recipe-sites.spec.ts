@@ -43,4 +43,18 @@ describe("recipe sites of the extension", () => {
     expect(headers("/api/v1/bridge/recipes/import")["Access-Control-Allow-Origin"]).toBe(origin);
     expect(headers("/api/v1/bridge/intermarche-cart/cart")["Access-Control-Allow-Origin"]).toBeUndefined();
   });
+
+  it("lets the window of the extension connect and check its key, and nothing else", () => {
+    const headers = (path: string, origin: string) => {
+      const set: Record<string, string> = {};
+      bridgeCors({ path, method: "POST", headers: { origin } } as never, { setHeader: (k: string, v: string) => { set[k] = v; } } as never, () => undefined);
+      return set;
+    };
+    const chrome = "chrome-extension://abcdefghijklmnopabcdefghijklmnop", firefox = "moz-extension://0d2f6b8e-1c3a-4b5d-9e7f-123456789abc";
+    expect(headers("/api/v1/extension/pair", chrome)["Access-Control-Allow-Origin"]).toBe(chrome);
+    expect(headers("/api/v1/auth/me", firefox)["Access-Control-Allow-Origin"]).toBe(firefox);
+    expect(headers("/api/v1/auth/me", firefox)["Access-Control-Allow-Credentials"]).toBeUndefined();
+    expect(headers("/api/v1/users", chrome)["Access-Control-Allow-Origin"]).toBeUndefined();
+    expect(headers("/api/v1/extension/pair", "https://evil.example.com")["Access-Control-Allow-Origin"]).toBeUndefined();
+  });
 });

@@ -37,3 +37,26 @@ describe("browser extension", () => {
     expect(z.readUInt16LE(z.length - 12)).toBe(2);
   });
 });
+
+describe("archives of the browser stores", () => {
+  const store = (target: "chrome" | "firefox") => {
+    const files = extensionFiles("", target);
+    return { files, manifest: JSON.parse(files["manifest.json"].toString()) };
+  };
+  it("talks to no instance by default and asks no access beyond the stores and recipe sites", () => {
+    const { files, manifest } = store("chrome");
+    expect(files["popup.js"].toString()).toContain('const DEFAULT_API = ""');
+    expect(manifest.optional_host_permissions).toBeUndefined();
+    expect(manifest.host_permissions.every((h: string) => h.startsWith("https://"))).toBe(true);
+    expect(manifest.host_permissions).not.toContain("https://*/*");
+    expect(manifest.permissions).toEqual(["storage"]);
+  });
+  it("gives each browser its own manifest, with icons of the right sizes", () => {
+    const chrome = store("chrome").manifest, { files, manifest: firefox } = store("firefox");
+    expect(chrome.browser_specific_settings).toBeUndefined();
+    expect(firefox.browser_specific_settings.gecko).toMatchObject({ id: "extension@pantarr.app", data_collection_permissions: { required: ["websiteContent", "financialAndPaymentInfo"] } });
+    for (const [size, file] of Object.entries(firefox.icons as Record<string, string>)) {
+      expect(files[file].readUInt32BE(16)).toBe(Number(size));   // PNG width
+    }
+  });
+});
