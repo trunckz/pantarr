@@ -1,0 +1,84 @@
+{
+  "name": "@pantarr/api",
+  "version": "0.1.0",
+  "license": "AGPL-3.0-or-later",
+  "private": true,
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "prisma generate && tsc -p tsconfig.build.json && cp -r src/i18n dist/ && cp src/connectors/intermarche/*.user.js dist/connectors/intermarche/ && cp src/connectors/stores/*.user.js dist/connectors/stores/ && cp src/connectors/lidl/*.user.js dist/connectors/lidl/ && mkdir -p dist/extension && cp -r src/extension/static dist/extension/ && cp -r src/recipes/starter dist/recipes/",
+    "dev": "prisma generate && tsc -p tsconfig.build.json --watch",
+    "start": "node dist/main.js",
+    "migrate": "prisma migrate deploy",
+    "test": "jest --selectProjects unit",
+    "test:e2e": "jest --selectProjects e2e --runInBand",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@nestjs/common": "^11.1.0",
+    "@nestjs/core": "^11.1.0",
+    "@nestjs/jwt": "^11.0.0",
+    "@nestjs/platform-express": "^11.1.0",
+    "@nestjs/schedule": "^6.0.0",
+    "@nestjs/serve-static": "^5.0.3",
+    "@nestjs/swagger": "^11.2.0",
+    "@node-rs/argon2": "^2.0.2",
+    "@pantarr/connector-sdk": "0.1.0",
+    "@prisma/client": "^6.10.0",
+    "@tesseract.js-data/eng": "^1.0.0",
+    "@tesseract.js-data/fra": "^1.0.0",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.2",
+    "cookie-parser": "^1.4.7",
+    "helmet": "^8.3.0",
+    "imapflow": "^1.7.8",
+    "mailparser": "^3.14.2",
+    "nodemailer": "^10.3.1",
+    "openid-client": "^5.7.1",
+    "prisma": "^6.10.0",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.2",
+    "tesseract.js": "^7.0.0",
+    "unpdf": "^1.4.0"
+  },
+  "devDependencies": {
+    "@nestjs/testing": "^11.2.8",
+    "@types/cookie-parser": "^1.4.9",
+    "@types/express": "^5.0.3",
+    "@types/jest": "^29.5.14",
+    "@types/mailparser": "^3.9.0",
+    "@types/multer": "^1.4.13",
+    "@types/node": "^22.15.0",
+    "@types/nodemailer": "^8.0.2",
+    "@types/supertest": "^6.0.3",
+    "jest": "^29.7.0",
+    "supertest": "^7.3.1",
+    "ts-jest": "^29.4.15",
+    "typescript": "^5.8.3"
+  },
+  "jest": {
+    "projects": [
+      {
+        "displayName": "unit",
+        "preset": "ts-jest",
+        "testEnvironment": "node",
+        "roots": [
+          "<rootDir>/src"
+        ],
+        "testMatch": [
+          "**/*.spec.ts"
+        ]
+      },
+      {
+        "displayName": "e2e",
+        "preset": "ts-jest",
+        "testEnvironment": "node",
+        "roots": [
+          "<rootDir>/test"
+        ],
+        "testMatch": [
+          "**/*.e2e.ts"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,2788 @@
+{
+ "version": 1,
+ "locale": "fr",
+ "recipes": [
+  {
+   "id": "pates-carbonara",
+   "name": "Pâtes à la carbonara",
+   "description": "La vraie, sans crème : jaunes d'œufs, parmesan et lardons, liés hors du feu avec un peu d'eau de cuisson.",
+   "servings": 4,
+   "prepMinutes": 10,
+   "cookMinutes": 12,
+   "tags": [
+    "Pâtes",
+    "Rapide",
+    "Enfants"
+   ],
+   "categories": [
+    "Plat"
+   ],
+   "ingredients": [
+    {
+     "text": "400 g de spaghetti"
+    },
+    {
+     "text": "200 g de lardons fumés"
+    },
+    {
+     "text": "4 jaunes d'œufs"
+    },
+    {
+     "text": "1 œuf entier"
+    },
+    {
+     "text": "80 g de parmesan râpé"
+    },
+    {
+     "text": "poivre noir"
+    }
+   ],
+   "steps": [
+    "Faire cuire les spaghetti dans une grande casserole d'eau bouillante salée. Garder une tasse d'eau de cuisson avant d'égoutter.",
+    "Pendant ce temps, faire dorer les lardons à sec dans une grande poêle, 5 à 6 minutes.",
+    "Battre les jaunes, l'œuf entier et le parmesan avec beaucoup de poivre.",
+    "Verser les pâtes égouttées dans la poêle hors du feu, ajouter le mélange aux œufs et 4 à 5 cuillères d'eau de cuisson. Mélanger vivement jusqu'à obtenir une sauce crémeuse (les œufs ne doivent pas cuire en omelette).",
+    "Servir aussitôt avec un peu de parmesan et de poivre."
+   ],
+   "image": {
+    "file": "images/pates-carbonara.jpg",
+    "author": "Javier Somoza",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Espaguetis_carbonara.jpg"
+   }
+  },
+  {
+   "id": "spaghetti-bolognaise",
+   "name": "Spaghetti bolognaise express",
+   "description": "Une sauce à la viande mijotée 20 minutes, assez pour toute la famille.",
+   "servings": 4,
+   "prepMinutes": 10,
+   "cookMinutes": 20,
+   "tags": [
+    "Pâtes",
+    "Viande",
+    "Enfants"
+   ],
+   "categories": [
+    "Plat"
+   ],
+   "ingredients": [
+    {
+     "text": "400 g de spaghetti"
+    },
+    {
+     "text": "400 g de bœuf haché"
+    },
+    {
+     "text": "1 oignon"
+    },
+    {
+     "text": "1 carotte"
+    },
+    {
+     "text": "1 gousse d'ail"
+    },
+    {
+     "text": "800 g de tomates concassées"
+    },
+    {
+     "text": "2 c. à s. de concentré de tomate"
+    },
+    {
+     "text": "2 c. à s. d'huile d'olive"
+    },
+    {
+     "text": "1 c. à c. d'origan"
+    },
+    {
+     "text": "sel, poivre"
+    },
+    {
+     "text": "parmesan râpé"
+    }
+   ],
+   "steps": [
+    "Hacher finement l'oignon, la carotte et l'ail.",
+    "Les faire revenir 5 minutes dans l'huile d'olive, puis ajouter la viande et la faire dorer en l'émiettant.",
+    "Ajouter les tomates, le concentré et l'origan. Saler, poivrer et laisser mijoter 15 minutes à feu doux.",
+    "Pendant ce temps, cuire les spaghetti dans l'eau bouillante salée.",
+    "Servir les pâtes nappées de sauce, avec du parmesan."
+   ],
+   "image": {
+    "file": "images/spaghetti-bolognaise.jpg",
+    "author": "Superbass",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Spaghetti_Bolognese_Lokal_K.jpg"
+   }
+  },
+  {
+   "id": "pates-pesto",
+   "name": "Pâtes au pesto maison",
+   "description": "Un pesto au basilic mixé en 5 minutes, à verser sur des pâtes chaudes.",
+   "servings": 4,
+   "prepMinutes": 10,
+   "cookMinutes": 10,
+   "tags": [
+    "Pâtes",
+    "Végétarien",
+    "Rapide"
+   ],
+   "categories": [
+    "Plat"
+   ],
+   "ingredients": [
+    {
+     "text": "400 g de pâtes (trofie, penne ou spaghetti)"
+    },
+    {
+     "text": "1 gros bouquet de basilic"
+    },
+    {
+     "text": "50 g de parmesan râpé"
+    },
+    {
+     "text": "40 g de pignons de pin"
+    },
+    {
+     "text": "1 gousse d'ail"
+    },
+    {
+     "text": "10 cl d'huile d'olive"
+    },
+    {
+     "text": "sel"
+    }
+   ],
+   "steps": [
+    "Cuire les pâtes dans l'eau bouillante salée.",
+    "Faire dorer les pignons quelques minutes à sec dans une poêle.",
+    "Mixer les feuilles de basilic, les pignons, l'ail, le parmesan et une pincée de sel en ajoutant l'huile d'olive petit à petit.",
+    "Égoutter les pâtes en gardant un peu d'eau de cuisson. Mélanger avec le pesto, en détendant avec 2 ou 3 cuillères d'eau de cuisson.",
+    "Servir aussitôt."
+   ],
+   "image": {
+    "file": "images/pates-pesto.jpg",
+    "author": "Marco Del Torchio 95",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Pasta_al_pesto_fatto_in_casa.jpg"
+   }
+  },
+  {
+   "id": "pates-saumon-creme",
+   "name": "Pâtes au saumon et à la crème",
+   "description": "Du saumon fumé, de la crème et un peu de citron : prêt pendant que les pâtes cuisent.",
+   "servings": 4,
+   "prepMinutes": 10,
+   "cookMinutes": 12,
+   "tags": [
+    "Pâtes",
+    "Poisson",
+    "Rapide"
+   ],
+   "categories": [
+    "Plat"
+   ],
+   "ingredients": [
+    {
+     "text": "400 g de tagliatelles"
+    },
+    {
+     "text": "200 g de saumon fumé"
+    },
+    {
+     "text": "20 cl de crème fraîche"
+    },
+    {
+     "text": "1 échalote"
+    },
+    {
+     "text": "1 citron"
+    },
+    {
+     "text": "1 c. à s. d'huile d'olive"
+    },
+    {
+     "text": "quelques brins d'aneth ou de ciboulette"
+    },
+    {
+     "text": "poivre"
+    }
+   ],
+   "steps": [
+    "Cuire les tagliatelles dans l'eau bouillante salée.",
+    "Émincer l'échalote et la faire fondre 3 minutes dans l'huile.",
+    "Ajouter la crème, le zeste et un filet de jus de citron, poivrer et laisser chauffer 2 minutes sans bouillir.",
+    "Couper le saumon en lanières et l'ajouter hors du feu.",
+    "Mélanger avec les pâtes égouttées et parsemer d'aneth ou de ciboulette."
+   ],
+   "image": {
+    "file": "images/pates-saumon-creme.jpg",
+    "author": "JIP",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Pasta_with_cold-smoked_salmon_and_peas_in_Loviisa.jpg"
+   }
+  },
+  {
+   "id": "tagliatelles-champignons",
+   "name": "Tagliatelles aux champignons",
+   "description": "Champignons de Paris poêlés, ail et crème, une sauce douce que les enfants aiment.",
+   "servings": 4,
+   "prepMinutes": 10,
+   "cookMinutes": 15,
+   "tags": [
+    "Pâtes",
+    "Végétarien",
+    "Rapide"
+   ],
+   "categories": [
+    "Plat"
+   ],
+   "ingredients": [
+    {
+     "text": "400 g de tagliatelles"
+    },
+    {
+     "text": "500 g de champignons de Paris"
+    },
+    {
+     "text": "2 gousses d'ail"
+    },
+    {
+     "text": "20 cl de crème fraîche"
+    },
+    {
+     "text": "30 g de beurre"
+    },
+    {
+     "text": "40 g de parmesan râpé"
+    },
+    {
+     "text": "persil"
+    },
+    {
+     "text": "sel, poivre"
+    }
+   ],
+   "steps": [
+    "Nettoyer et émincer les champignons, hacher l'ail.",
+    "Faire dorer les champignons 8 minutes dans le beurre à feu vif, ajouter l'ail en fin de cuisson.",
+    "Cuire les tagliatelles dans l'eau bouillante salée.",
+    "Ajouter la crème aux champignons, saler, poivrer et laisser réduire 3 minutes.",
+    "Mélanger avec les pâtes, le parmesan et le persil haché."
+   ],
+   "image": {
+    "file": "images/tagliatelles-champignons.jpg",
+    "author": "Gius.arena",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Tagliatelle_ai_funghi_da_Luciana,_San_Piero_Patti,_Italia.jpg"
+   }
+  },
+  {
+   "id": "coquillettes-jambon",
+   "name": "Coquillettes au jambon et au fromage",
+   "description": "Le classique des soirs pressés, version un peu gratinée.",
+   "servings": 4,
+   "prepMinutes": 5,
+   "cookMinutes": 15,
+   "tags": [
+    "Pâtes",
+    "Enfants",
+    "Rapide"
+   ],
+   "categories": [
+    "Plat"
+   ],
+   "ingredients": [
+    {
+     "text": "400 g de coquillettes"
+    },
+    {
+     "text": "4 tranches de jambon blanc"
+    },
+    {
+     "text": "100 g d'emmental râpé"
+    },
+    {
+     "text": "10 cl de crème fraîche"
+    },
+    {
+     "text": "20 g de beurre"
+    },
+    {
+     "text": "sel, poivre"
+    }
+   ],
+   "steps": [
+    "Cuire les coquillettes dans l'eau bouillante salée, les égoutter.",
+    "Couper le jambon en petits morceaux.",
+    "Remettre les coquillettes dans la casserole avec le beurre, la crème, le jambon et la moitié du fromage. Mélanger à feu doux 2 minutes.",
+    "Verser dans un plat, couvrir du reste de fromage et passer 5 minutes sous le gril du four."
+   ],
+   "image": {
+    "file": "images/coquillettes-jambon.jpg",
+    "author": "Peachyeung316",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:A_Baked_Pasta_with_Double_Cheese_and_Ham.jpg"
+   }
+  },
+  {
+   "id": "pates-thon-tomate",
+   "name": "Pâtes au thon et à la tomate",
+   "description": "Une sauce de placard : tomates, thon, câpres et olives.",
+   "servings": 4,
+   "prepMinutes": 5,
+   "cookMinutes": 15,
+   "tags": [
+    "Pâtes",
+    "Poisson",
+    "Rapide"
+   ],
+   "categories": [
+    "Plat"
+   ],
+   "ingredients": [
+    {
+     "text": "400 g de penne"
+    },
+    {
+     "text": "2 boîtes de thon au naturel (280 g égoutté)"
+    },
+    {
+     "text": "800 g de tomates concassées"
+    },
+    {
+     "text": "1 oignon"
+    },
+    {
+     "text": "1 gousse d'ail"
+    },
+    {
+     "text": "1 c. à s. de câpres"
+    },
+    {
+     "text": "50 g d'olives noires"
+    },
+    {
+     "text": "2 c. à s. d'huile d'olive"
+    },
+    {
+     "text": "sel, poivre"
+    }
+   ],
+   "steps": [
+    "Émincer l'oignon et l'ail et les faire fondre dans l'huile 3 minutes.",
+    "Ajouter les tomates, saler, poivrer et laisser cuire 10 minutes.",
+    "Pendant ce temps, cuire les pâtes.",
+    "Ajouter le thon émietté, les câpres et les olives à la sauce et chauffer 2 minutes.",
+    "Mélanger avec les pâtes égouttées."
+   ],
+   "image": {
+    "file": "images/pates-thon-tomate.jpg",
+    "author": "Julien Seguinot from Lille, France",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Pasta_with_tomato_sauce,_capers_and_tuna_(50540741211).jpg"
+   }
+  },
+  {
+   "id": "gnocchi-sauce-tomate",
+   "name": "Gnocchi poêlés à la sauce tomate",
+   "description": "Des gnocchi dorés à la poêle, dans une sauce tomate au basilic et mozzarella.",
+   "servings": 4,
+   "prepMinutes": 5,
+   "cookMinutes": 15,
+   "tags": [
+    "Végétarien",
+    "Rapide",
+    "Enfants"
+   ],
+   "categories": [
+    "Plat"
+   ],
+   "ingredients": [
+    {
+     "text": "800 g de gnocchi frais"
+    },
+    {
+     "text": "500 g de coulis de tomate"
+    },
+    {
+     "text": "1 gousse d'ail"
+    },
+    {
+     "text": "1 boule de mozzarella"
+    },
+    {
+     "text": "quelques feuilles de basilic"
+    },
+    {
+     "text": "2 c. à s. d'huile d'olive"
+    },
+    {
+     "text": "sel, poivre"
+    }
+   ],
+   "steps": [
+    "Faire dorer les gnocchi 5 minutes dans l'huile, dans une grande poêle, en les retournant.",
+    "Ajouter l'ail haché puis le coulis, saler et poivrer.",
+    "Laisser mijoter 5 minutes.",
+    "Ajouter la mozzarella en morceaux, couvrir 2 minutes pour la faire fondre, et parsemer de basilic."
+   ],
+   "image": {
+    "file": "images/gnocchi-sauce-tomate.jpg",
+    "author": "BrokenSphere",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Gnocchi_with_beef_and_tomato_sauce.JPG"
+   }
+  },
+  {
+   "id": "risotto-champignons",
+   "name": "Risotto aux champignons",
+   "description": "Un risotto crémeux en 25 minutes, en remuant souvent.",
+   "servings": 4,
+   "prepMinutes": 5,
+   "cookMinutes": 25,
+   "tags": [
+    "Riz",
+    "Végétarien"
+   ],
+   "categories": [
+    "Plat"
+   ],
+   "ingredients": [
+    {
+     "text": "300 g de riz arborio"
+    },
+    {
+     "text": "300 g de champignons de Paris"
+    },
+    {
+     "text": "1 oignon"
+    },
+    {
+     "text": "10 cl de vin blanc sec (facultatif)"
+    },
+    {
+     "text": "1 l de bouillon de légumes chaud"
+    },
+    {
+     "text": "50 g de parmesan râpé"
+    },
+    {
+     "text": "30 g de beurre"
+    },
+    {
+     "text": "2 c. à s. d'huile d'olive"
+    },
+    {
+     "text": "sel, poivre"
+    }
+   ],
+   "steps": [
+    "Émincer l'oignon et les champignons.",
+    "Faire revenir l'oignon dans l'huile, ajouter le riz et le nacrer 2 minutes en remuant.",
+    "Verser le vin et laisser évaporer, puis ajouter le bouillon louche par louche en remuant, en attendant qu'il soit absorbé à chaque fois (environ 18 minutes).",
+    "Pendant ce temps, faire dorer les champignons dans une poêle avec un peu de beurre.",
+    "Hors du feu, ajouter les champignons, le reste du beurre et le parmesan. Poivrer et servir aussitôt."
+   ],
+   "image": {
+    "file": "images/risotto-champignons.jpg",
+    "author": "spurekar",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Mushroom_and_Leek_Risotto_(49535206656).jpg"
+   }
+  },
+  {
+   "id": "riz-cantonais",
+   "name": "Riz cantonais",
+   "description": "Le bon usage d'un reste de riz : œufs, jambon et petits pois sautés à feu vif.",
+   "servings": 4,
+   "prepMinutes": 10,
+   "cookMinutes": 10,
+   "tags": [
+    "Riz",
+    "Rapide",
+    "Enfants"
+   ],
+   "categories": [
+    "Plat"
+   ],
+   "ingredients": [
+    {
+     "text": "600 g de riz cuit (de la veille de préférence)"
+    },
+    {
+     "text": "3 œufs"
+    },
+    {
+     "text": "150 g de jambon blanc"
+    },
+    {
+     "text": "150 g de petits pois surgelés"
+    },
+    {
+     "text": "1 oignon"
+    },
+    {
+     "text": "2 c. à s. de sauce soja"
+    },
+    {
+     "text": "2 c. à s. d'huile"
+    }
+   ],
+   "steps": [
+    "Couper le jambon en dés, émincer l'oignon.",
+    "Battre les œufs, les cuire en omelette fine dans un peu d'huile, puis les couper en lanières.",
+    "Dans la même poêle (ou un wok), faire revenir l'oignon et les petits pois 3 minutes dans le reste d'huile.",
+    "Ajouter le riz et le jambon et faire sauter 4 minutes à feu vif.",
+    "Ajouter l'omelette et la sauce soja, mélanger et servir."
+   ],
+   "image": {
+    "file": "images/riz-cantonais.jpg",
+    "author": "Peachyeung316",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Fried_rice_in_home.jpg"
+   }
+  },
+  {
+   "id": "wok-poulet-legumes",
+   "name": "Wok de poulet aux légumes",
+   "description": "Poulet et légumes croquants sautés, sauce soja-gingembre.",
+   "servings": 4,
+   "prepMinutes": 15,
+   "cookMinutes": 10,
+   "tags": [
+    "Volaille",
+    "Rapide"
+   ],
+   "categories": [
+    "Plat"
+   ],
+   "ingredients": [
+    {
+     "text": "500 g de blancs de poulet"
+    },
+    {
+     "text": "1 poivron rouge"
+    },
+    {
+     "text": "1 courgette"
+    },
+    {
+     "text": "2 carottes"
+    },
+    {
+     "text": "1 oignon"
+    },
+    {
+     "text": "1 morceau de gingembre frais (2 cm)"
+    },
+    {
+     "text": "1 gousse d'ail"
+    },
+    {
+     "text": "4 c. à s. de sauce soja"
+    },
+    {
+     "text": "1 c. à s. de miel"
+    },
+    {
+     "text": "2 c. à s. d'huile"
+    },
+    {
+     "text": "riz pour servir"
+    }
+   ],
+   "steps": [
+    "Couper le poulet en lamelles et les légumes en bâtonnets fins. Râper le gingembre et l'ail.",
+    "Mélanger la sauce soja et le miel.",
+    "Faire sauter le poulet 4 minutes à feu vif dans l'huile, le réserver.",
+    "Faire sauter les légumes 4 minutes avec l'ail et le gingembre : ils doivent rester croquants.",
+    "Remettre le poulet, verser la sauce, mélanger 1 minute et servir avec du riz."
+   ],
+   "image": {
+    "file": "images/wok-poulet-legumes.jpg",
+    "author": "Takeaway",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Kai_phat_khing.jpg"
+   }
+  },
+  {
+   "id": "nouilles-boeuf",
+   "name": "Nouilles sautées au bœuf",
+   "description": "Nouilles de blé, bœuf émincé et légumes, façon wok.",
+   "servings": 4,
+   "prepMinutes": 15,
+   "cookMinutes": 10,
+   "tags": [
+    "Viande",
+    "Rapide"
+   ],
+   "categories": [
+    "Plat"
+   ],
+   "ingredients": [
+    {
+     "text": "300 g de nouilles chinoises"
+    },
+    {
+     "text": "400 g de bœuf à griller (rumsteck)"
+    },
+    {
+     "text": "1 poivron"
+    },
+    {
+     "text": "2 oignons nouveaux"
+    },
+    {
+     "text": "150 g de pousses de soja"
+    },
+    {
+     "text": "4 c. à s. de sauce soja"
+    },
+    {
+     "text": "1 c. à s. de sauce d'huître"
+    },
+    {
+     "text": "1 gousse d'ail"
+    },
+    {
+     "text": "2 c. à s. d'huile"
+    }
+   ],
+   "steps": [
+    "Cuire les nouilles selon le paquet, les égoutter et les passer sous l'eau froide.",
+    "Émincer finement le bœuf, le poivron et les oignons nouveaux.",
+    "Saisir le bœuf 2 minutes à feu très vif dans l'huile, le réserver.",
+    "Faire sauter le poivron, l'ail et les oignons 3 minutes.",
+    "Ajouter les nouilles, les pousses de soja, le bœuf et les sauces, faire sauter 2 minutes et servir."
+   ],
+   "image": {
+    "file": "images/nouilles-boeuf.jpg",
+    "author": "TurquoiseGoose",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Beef_Stir-fried_Noodles_-_Frank%27s_Noodle_House.jpg"
+   }
+  },
+  {
+   "id": "poulet-curry-coco",
+   "name": "Poulet au curry et lait de coco",
+   "description": "Un curry doux, parfait avec du riz basmati.",
+   "servings": 4,
+   "prepMinutes": 10,
+   "cookMinutes": 20,
+   "tags": [
+    "Volaille",
+    "Enfants"
+   ],
+   "categories": [
+    "Plat"
+   ],
+   "ingredients": [
+    {
+     "text": "600 g de blancs de poulet"
+    },
+    {
+     "text": "40 cl de lait de coco"
+    },
+    {
+     "text": "1 oignon"
+    },
+    {
+     "text": "2 c. à s. de curry en poudre doux"
+    },
+    {
+     "text": "200 g de tomates concassées"
+    },
+    {
+     "text": "1 c. à s. d'huile"
+    },
+    {
+     "text": "coriandre fraîche"
+    },
+    {
+     "text": "sel"
+    },
+    {
+     "text": "riz basmati pour servir"
+    }
+   ],
+   "steps": [
+    "Couper le poulet en morceaux et émincer l'oignon.",
+    "Faire dorer l'oignon dans l'huile, ajouter le poulet et le faire colorer 5 minutes.",
+    "Ajouter le curry, mélanger 1 minute, puis les tomates et le lait de coco. Saler.",
+    "Laisser mijoter 12 minutes à feu doux.",
+    "Parsemer de coriandre et servir avec le riz."
+   ],
+   "image": {
+    "file": "images/poulet-curry-coco.jpg",
+    "author": "Katrin Gilger",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Asian_Chicken_Curry_(4652719000).jpg"
+   }
+  },
+  {
+   "id": "poulet-creme-champignons",
+   "name": "Escalopes de poulet à la crème et aux champignons",
+   "description": "Un plat du dimanche prêt en semaine.",
+   "servings": 4,
+   "prepMinutes": 10,
+   "cookMinutes": 20,
+   "tags": [
+    "Volaille",
+    "Enfants"
+   ],
+   "categories": [
+    "Plat"
+   ],
+   "ingredients": [
+    {
+     "text": "4 escalopes de poulet"
+    },
+    {
+     "text": "300 g de champignons de Paris"
+    },
+    {
+     "text": "1 échalote"
+    },
+    {
+     "text": "20 cl de crème fraîche"
+    },
+    {
+     "text": "20 g de beurre"
+    },
+    {
+     "text": "1 c. à s. d'huile"
+    },
+    {
+     "text": "persil"
+    },
+    {
+     "text": "sel, poivre"
+    }
+   ],
+   "steps": [
+    "Émincer l'échalote et les champignons.",
+    "Faire dorer les escalopes 4 minutes de chaque côté dans l'huile et le beurre, saler, poivrer et réserver.",
+    "Dans la même poêle, faire revenir l'échalote et les champignons 6 minutes.",
+    "Ajouter la crème, remettre les escalopes et laisser mijoter 5 minutes.",
+    "Parsemer de persil. Servir avec des pâtes, du riz ou des haricots verts."
+   ],
+   "image": {
+    "file": "images/poulet-creme-champignons.jpg",
+    "author": "Jon Sullivan",
+    "license": "Public domain",
+    "licenseUrl": "",
+    "source": "https://commons.wikimedia.org/wiki/File:Chicken_mushrooms_sauces.jpg"
+   }
+  },
+  {
+   "id": "poulet-citron-miel",
+   "name": "Poulet au citron et au miel",
+   "description": "Des morceaux de poulet laqués au miel et au citron, à la poêle.",
+   "servings": 4,
+   "prepMinutes": 10,
+   "cookMinutes": 15,
+   "tags": [
+    "Volaille",
+    "Rapide",
+    "Enfants"
+   ],
+   "categories": [
+    "Plat"
+   ],
+   "ingredients": [
+    {
+     "text": "600 g de blancs ou hauts de cuisse de poulet"
+    },
+    {
+     "text": "2 citrons"
+    },
+    {
+     "text": "3 c. à s. de miel"
+    },
+    {
+     "text": "2 c. à s. de sauce soja"
+    },
+    {
+     "text": "1 gousse d'ail"
+    },
+    {
+     "text": "1 c. à s. de fécule de maïs"
+    },
+    {
+     "text": "1 c. à s. d'huile"
+    },
+    {
+     "text": "sel, poivre"
+    }
+   ],
+   "steps": [
+    "Couper le poulet en morceaux, les rouler dans la fécule, saler et poivrer.",
+    "Mélanger le jus d'un citron et demi, le zeste, le miel, la sauce soja et l'ail râpé.",
+    "Faire dorer le poulet 8 minutes dans l'huile à feu moyen.",
+    "Verser la sauce et laisser réduire 3 à 4 minutes en enrobant les morceaux.",
+    "Servir avec des rondelles de citron, du riz ou des légumes verts."
+   ],
+   "image": {
+    "file": "images/poulet-citron-miel.jpg",
+    "author": "Willis Lam",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Tenglong_Chinese_Restaurant_Lemon_Chicken_(37577556406).jpg"
+   }
+  },
+  {
+   "id": "fajitas-poulet",
+   "name": "Fajitas de poulet",
+   "description": "Poulet et poivrons épicés à garnir soi-même : idéal pour un dîner à partager.",
+   "servings": 4,
+   "prepMinutes": 15,
+   "cookMinutes": 10,
+   "tags": [
+    "Volaille",
+    "Rapide",
+    "Enfants"
+   ],
+   "categories": [
+    "Plat"
+   ],
+   "ingredients": [
+    {
+     "text": "500 g de blancs de poulet"
+    },
+    {
+     "text": "2 poivrons de couleurs différentes"
+    },
+    {
+     "text": "1 oignon rouge"
+    },
+    {
+     "text": "8 tortillas de blé"
+    },
+    {
+     "text": "1 c. à s. d'épices à fajitas (cumin, paprika, piment doux)"
+    },
+    {
+     "text": "1 citron vert"
+    },
+    {
+     "text": "2 c. à s. d'huile"
+    },
+    {
+     "text": "1 pot de crème aigre ou de fromage blanc"
+    },
+    {
+     "text": "1 avocat"
+    },
+    {
+     "text": "sel"
+    }
+   ],
+   "steps": [
+    "Couper le poulet, les poivrons et l'oignon en lanières.",
+    "Mélanger le poulet avec les épices, le jus du citron vert et une cuillère d'huile.",
+    "Faire sauter le poulet 5 minutes à feu vif, puis les légumes 4 minutes.",
+    "Chauffer les tortillas quelques secondes à la poêle.",
+    "Chacun garnit ses tortillas de poulet, de légumes, d'avocat écrasé et de crème."
+   ],
+   "image": {
+    "file": "images/fajitas-poulet.jpg",
+    "author": "Missvain",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Chicken_fajitas_-_La_Hacienda_-_Sarah_Stierch.jpg"
+   }
+  },
+  {
+   "id": "wraps-poulet",
+   "name": "Wraps de poulet et crudités",
+   "description": "Des wraps frais, chauds ou froids, pour le dîner ou un pique-nique.",
+   "servings": 4,
+   "prepMinutes": 15,
+   "cookMinutes": 10,
+   "tags": [
+    "Volaille",
+    "Rapide"
+   ],
+   "categories": [
+    "Plat"
+   ],
+   "ingredients": [
+    {
+     "text": "4 grandes tortillas de blé"
+    },
+    {
+     "text": "2 blancs de poulet"
+    },
+    {
+     "text": "4 feuilles de laitue"
+    },
+    {
+     "text": "2 tomates"
+    },
+    {
+     "text": "1/2 concombre"
+    },
+    {
+     "text": "4 c. à s. de fromage frais"
+    },
+    {
+     "text": "1 c. à c. de paprika"
+    },
+    {
+     "text": "1 c. à s. d'huile"
+    },
+    {
+     "text": "sel, poivre"
+    }
+   ],
+   "steps": [
+    "Couper le poulet en lamelles, l'assaisonner de paprika, sel et poivre et le cuire 8 minutes dans l'huile.",
+    "Laver la salade, couper les tomates et le concombre en fines tranches.",
+    "Étaler le fromage frais sur les tortillas, ajouter les crudités et le poulet.",
+    "Rouler serré, couper en deux et servir."
+   ],
+   "image": {
+    "file": "images/wraps-poulet.jpg",
+    "author": "Takeaway",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Smoked_chicken_and_avocado_wrap.jpg"
+   }
+  },
+  {
+   "id": "quesadillas-haricots",
+   "name": "Quesadillas aux haricots rouges et au fromage",
+   "description": "Des tortillas croustillantes et fondantes, sans viande.",
+   "servings": 4,
+   "prepMinutes": 10,
+   "cookMinutes": 15,
+   "tags": [
+    "Végétarien",
+    "Légumineuses",
+    "Rapide",
+    "Enfants"
+   ],
+   "categories": [
+    "Plat"
+   ],
+   "ingredients": [
+    {
+     "text": "8 tortillas de blé"
+    },
+    {
+     "text": "1 boîte de haricots rouges (400 g)"
+    },
+    {
+     "text": "200 g de cheddar ou d'emmental râpé"
+    },
+    {
+     "text": "1 boîte de maïs (140 g)"
+    },
+    {
+     "text": "1 c. à c. de cumin"
+    },
+    {
+     "text": "salsa et crème aigre pour servir"
+    }
+   ],
+   "steps": [
+    "Égoutter et rincer les haricots, les écraser grossièrement avec le cumin, puis ajouter le maïs.",
+    "Étaler le mélange sur 4 tortillas, parsemer de fromage et couvrir avec les 4 autres.",
+    "Cuire chaque quesadilla 3 minutes de chaque côté dans une poêle sèche, jusqu'à ce que le fromage fonde.",
+    "Couper en parts et servir avec la salsa et la crème."
+   ],
+   "image": {
+    "file": "images/quesadillas-haricots.jpg",
+    "author": "Photograph by Mike Peel (www.mikepeel.net).",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:At_Long_Island_2023_267.jpg"
+   }
+  },
+  {
+   "id": "chili-con-carne",
+   "name": "Chili con carne express",
+   "description": "Le chili familial en 30 minutes, doux ou relevé selon le goût.",
+   "servings": 4,
+   "prepMinutes": 10,
+   "cookMinutes": 20,
+   "tags": [
+    "Viande",
+    "Légumineuses"
+   ],
+   "categories": [
+    "Plat"
+   ],
+   "ingredients": [
+    {
+     "text": "500 g de bœuf haché"
+    },
+    {
+     "text": "1 boîte de haricots rouges (400 g)"
+    },
+    {
+     "text": "800 g de tomates concassées"
+    },
+    {
+     "text": "1 oignon"
+    },
+    {
+     "text": "1 poivron rouge"
+    },
+    {
+     "text": "2 gousses d'ail"
+    },
+    {
+     "text": "2 c. à c. de cumin"
+    },
+    {
+     "text": "1 c. à c. de paprika"
+    },
+    {
+     "text": "piment (selon le goût)"
+    },
+    {
+     "text": "2 c. à s. d'huile"
+    },
+    {
+     "text": "sel"
+    },
+    {
+     "text": "riz pour servir"
+    }
+   ],
+   "steps": [
+    "Hacher l'oignon, l'ail et le poivron, les faire revenir 5 minutes dans l'huile.",
+    "Ajouter la viande et la faire dorer en l'émiettant, puis les épices.",
+    "Ajouter les tomates et les haricots égouttés, saler et laisser mijoter 15 minutes.",
+    "Goûter, ajuster le piment et servir avec du riz."
+   ],
+   "image": {
+    "file": "images/chili-con-carne.jpg",
+    "author": "Aerith",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:Chili_con_carne_cuisson.jpg"
+   }
+  },
+  {
+   "id": "burgers-maison",
+   "name": "Burgers maison",
+   "description": "Des steaks hachés, des pains briochés et ce qu'il faut pour les garnir.",
+   "servings": 4,
+   "prepMinutes": 10,
+   "cookMinutes": 10,
+   "tags": [
+    "Viande",
+    "Enfants"
+   ],
+   "categories": [
+    "Plat"
+   ],
+   "ingredients": [
+    {
+     "text": "4 pains à burger"
+    },
+    {
+     "text": "4 steaks hachés (500 g de bœuf haché)"
+    },
+    {
+     "text": "4 tranches de cheddar"
+    },
+    {
+     "text": "2 tomates"
+    },
+    {
+     "text": "1 oignon rouge"
+    },
+    {
+     "text": "4 feuilles de laitue"
+    },
+    {
+     "text": "ketchup, moutarde"
+    },
+    {
+     "text": "sel, poivre"
+    }
+   ],
+   "steps": [
+    "Couper les tomates et l'oignon en rondelles, laver la salade.",
+    "Faire griller les pains coupés en deux à la poêle ou au grille-pain.",
+    "Cuire les steaks à feu vif 2 à 4 minutes de chaque côté selon la cuisson voulue, saler, poivrer et poser le cheddar dessus la dernière minute.",
+    "Monter les burgers : pain, sauce, salade, steak, tomate, oignon, pain."
+   ],
+   "image": {
+    "file": "images/burgers-maison.jpg",
+    "author": "Horacio Cambeiro",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Argentine_homemade_hamburger_with_lettuce,_tomato_and_cheese.jpg"
+   }
+  },
+  {
+   "id": "saucisses-puree",
+   "name": "Saucisses et purée maison",
+   "description": "Une purée onctueuse qui se fait pendant que les saucisses dorent.",
+   "servings": 4,
+   "prepMinutes": 10,
+   "cookMinutes": 20,
+   "tags": [
+    "Viande",
+    "Enfants"
+   ],
+   "categories": [
+    "Plat"
+   ],
+   "ingredients": [
+    {
+     "text": "8 saucisses de Toulouse ou chipolatas"
+    },
+    {
+     "text": "1 kg de pommes de terre à purée"
+    },
+    {
+     "text": "25 cl de lait"
+    },
+    {
+     "text": "50 g de beurre"
+    },
+    {
+     "text": "1 pincée de muscade"
+    },
+    {
+     "text": "sel, poivre"
+    }
+   ],
+   "steps": [
+    "Éplucher les pommes de terre, les couper en morceaux et les cuire 20 minutes dans l'eau bouillante salée.",
+    "Pendant ce temps, cuire les saucisses à la poêle à feu moyen, en les retournant, 15 à 20 minutes.",
+    "Égoutter les pommes de terre, les écraser avec le beurre et le lait chaud. Saler, poivrer, ajouter la muscade.",
+    "Servir les saucisses avec la purée."
+   ],
+   "image": {
+    "file": "images/saucisses-puree.jpg",
+    "author": "PapiPijuan",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Bangers_and_Mash.jpg"
+   }
+  },
+  {
+   "id": "cotes-porc-moutarde",
+   "name": "Côtes de porc à la moutarde",
+   "description": "Une sauce moutarde-crème vite faite dans la poêle de cuisson.",
+   "servings": 4,
+   "prepMinutes": 5,
+   "cookMinutes": 20,
+   "tags": [
+    "Viande"
+   ],
+   "categories": [
+    "Plat"
+   ],
+   "ingredients": [
+    {
+     "text": "4 côtes de porc"
+    },
+    {
+     "text": "2 c. à s. de moutarde à l'ancienne"
+    },
+    {
+     "text": "20 cl de crème fraîche"
+    },
+    {
+     "text": "1 échalote"
+    },
+    {
+     "text": "1 c. à s. d'huile"
+    },
+    {
+     "text": "sel, poivre"
+    }
+   ],
+   "steps": [
+    "Saler et poivrer les côtes et les cuire 6 à 7 minutes de chaque côté dans l'huile, à feu moyen. Réserver au chaud.",
+    "Faire revenir l'échalote émincée dans la poêle 2 minutes.",
+    "Ajouter la crème et la moutarde, mélanger en grattant les sucs et laisser réduire 3 minutes.",
+    "Napper les côtes de sauce. Servir avec des haricots verts ou des pommes de terre."
+   ],
+   "image": {
+    "file": "images/cotes-porc-moutarde.jpg",
+    "author": "Christopher Aloi from Syracuse NY, USA",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Tonight%27s_Dinner,_Pork_Chops_-_Flickr_-_ctaloi.jpg"
+   }
+  },
+  {
+   "id": "boeuf-poivrons",
+   "name": "Bœuf sauté aux poivrons",
+   "description": "Des lanières de bœuf et de poivrons, sauce soja, à servir avec du riz.",
+   "servings": 4,
+   "prepMinutes": 15,
+   "cookMinutes": 10,
+   "tags": [
+    "Viande",
+    "Rapide"
+   ],
+   "categories": [
+    "Plat"
+   ],
+   "ingredients": [
+    {
+     "text": "500 g de bœuf à griller"
+    },
+    {
+     "text": "2 poivrons (rouge et vert)"
+    },
+    {
+     "text": "1 oignon"
+    },
+    {
+     "text": "2 gousses d'ail"
+    },
+    {
+     "text": "4 c. à s. de sauce soja"
+    },
+    {
+     "text": "1 c. à c. de fécule de maïs"
+    },
+    {
+     "text": "2 c. à s. d'huile"
+    },
+    {
+     "text": "riz pour servir"
+    }
+   ],
+   "steps": [
+    "Couper le bœuf en fines lanières et le mélanger avec 2 cuillères de sauce soja et la fécule.",
+    "Couper les poivrons et l'oignon en lanières.",
+    "Saisir le bœuf 2 minutes à feu très vif dans l'huile, réserver.",
+    "Faire sauter les légumes et l'ail 4 minutes, remettre la viande et le reste de sauce soja, mélanger 1 minute.",
+    "Servir avec le riz."
+   ],
+   "image": {
+    "file": "images/boeuf-poivrons.jpg",
+    "author": "jeffreyw",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Beef_and_Pea_Pod_Stir_Fry_(4423896316).jpg"
+   }
+  },
+  {
+   "id": "croque-monsieur",
+   "name": "Croque-monsieur",
+   "description": "Jambon, fromage et béchamel légère, dorés au four.",
+   "servings": 4,
+   "prepMinutes": 10,
+   "cookMinutes": 10,
+   "tags": [
+    "Enfants",
+    "Rapide"
+   ],
+   "categories": [
+    "Plat"
+   ],
+   "ingredients": [
+    {
+     "text": "8 tranches de pain de mie"
+    },
+    {
+     "text": "4 tranches de jambon blanc"
+    },
+    {
+     "text": "150 g d'emmental râpé"
+    },
+    {
+     "text": "20 cl de lait"
+    },
+    {
+     "text": "20 g de beurre"
+    },
+    {
+     "text": "20 g de farine"
+    },
+    {
+     "text": "1 pincée de muscade"
+    },
+    {
+     "text": "sel, poivre"
+    },
+    {
+     "text": "salade verte pour servir"
+    }
+   ],
+   "steps": [
+    "Préchauffer le four à 220 °C.",
+    "Faire une béchamel : fondre le beurre, ajouter la farine, puis le lait en fouettant jusqu'à épaississement. Saler, poivrer, ajouter la muscade.",
+    "Tartiner 4 tranches de pain de béchamel, poser le jambon et un peu de fromage, couvrir avec les autres tranches.",
+    "Napper le dessus de béchamel et du reste du fromage.",
+    "Cuire 10 minutes au four jusqu'à ce que ce soit doré. Servir avec une salade."
+   ],
+   "image": {
+    "file": "images/croque-monsieur.jpg",
+    "author": "Photogoddle",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Cambodian_Croque_Monsieur.jpg"
+   }
+  },
+  {
+   "id": "galettes-completes",
+   "name": "Galettes de sarrasin complètes",
+   "description": "Jambon, œuf et fromage : la galette bretonne à la maison, avec des galettes toutes prêtes.",
+   "servings": 4,
+   "prepMinutes": 5,
+   "cookMinutes": 15,
+   "tags": [
+    "Œufs",
+    "Rapide"
+   ],
+   "categories": [
+    "Plat"
+   ],
+   "ingredients": [
+    {
+     "text": "4 galettes de sarrasin (prêtes à garnir)"
+    },
+    {
+     "text": "4 tranches de jambon blanc"
+    },
+    {
+     "text": "4 œufs"
+    },
+    {
+     "text": "100 g d'emmental râpé"
+    },
+    {
+     "text": "20 g de beurre"
+    },
+    {
+     "text": "poivre"
+    }
+   ],
+   "steps": [
+    "Chauffer une grande poêle avec un peu de beurre et y poser une galette.",
+    "Parsemer de fromage, poser une tranche de jambon et casser un œuf au centre.",
+    "Couvrir et cuire 3 à 4 minutes, jusqu'à ce que le blanc soit pris.",
+    "Replier les bords de la galette en carré, poivrer et servir. Recommencer avec les autres."
+   ],
+   "image": {
+    "file": "images/galettes-completes.jpg",
+    "author": "Arnaud 25",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Galette_de_sarrasin_compl%C3%A8te_bretonne.jpg"
+   }
+  },
+  {
+   "id": "pizza-maison",
+   "name": "Pizza maison express",
+   "description": "Une pâte toute prête, une sauce tomate, la garniture de chacun.",
+   "servings": 4,
+   "prepMinutes": 10,
+   "cookMinutes": 15,
+   "tags": [
+    "Enfants"
+   ],
+   "categories": [
+    "Plat"
+   ],
+   "ingredients": [
+    {
+     "text": "2 pâtes à pizza prêtes à étaler"
+    },
+    {
+     "text": "300 g de coulis de tomate"
+    },
+    {
+     "text": "2 boules de mozzarella"
+    },
+    {
+     "text": "1 c. à c. d'origan"
+    },
+    {
+     "text": "garniture au choix : jambon, champignons, olives, poivron"
+    },
+    {
+     "text": "2 c. à s. d'huile d'olive"
+    }
+   ],
+   "steps": [
+    "Préchauffer le four à 250 °C (ou au plus chaud).",
+    "Dérouler les pâtes sur leur papier, étaler le coulis, parsemer d'origan.",
+    "Ajouter la mozzarella en morceaux et la garniture choisie, arroser d'un filet d'huile.",
+    "Cuire 12 à 15 minutes jusqu'à ce que la pâte soit dorée."
+   ],
+   "image": {
+    "file": "images/pizza-maison.jpg",
+    "author": "N i c o l a from Fiumicino (Rome), Italy",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Pizza_(17450755191).jpg"
+   }
+  },
+  {
+   "id": "omelette-champignons",
+   "name": "Omelette aux champignons",
+   "description": "Une omelette baveuse aux champignons et aux fines herbes.",
+   "servings": 4,
+   "prepMinutes": 10,
+   "cookMinutes": 10,
+   "tags": [
+    "Œufs",
+    "Végétarien",
+    "Rapide"
+   ],
+   "categories": [
+    "Plat"
+   ],
+   "ingredients": [
+    {
+     "text": "8 œufs"
+    },
+    {
+     "text": "250 g de champignons de Paris"
+    },
+    {
+     "text": "1 échalote"
+    },
+    {
+     "text": "20 g de beurre"
+    },
+    {
+     "text": "ciboulette ou persil"
+    },
+    {
+     "text": "sel, poivre"
+    },
+    {
+     "text": "salade verte pour servir"
+    }
+   ],
+   "steps": [
+    "Émincer les champignons et l'échalote, les faire dorer 6 minutes dans la moitié du beurre. Saler, poivrer.",
+    "Battre les œufs avec les herbes ciselées, sel et poivre.",
+    "Faire fondre le reste du beurre dans la poêle, verser les œufs et remuer doucement en ramenant les bords vers le centre.",
+    "Quand l'omelette est encore baveuse, ajouter les champignons, la plier en deux et servir avec une salade."
+   ],
+   "image": {
+    "file": "images/omelette-champignons.jpg",
+    "author": "MaedaAkihiko",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Omelette-Plate.jpg"
+   }
+  },
+  {
+   "id": "shakshuka",
+   "name": "Shakshuka",
+   "description": "Des œufs pochés dans une sauce tomate aux poivrons et aux épices.",
+   "servings": 4,
+   "prepMinutes": 10,
+   "cookMinutes": 20,
+   "tags": [
+    "Œufs",
+    "Végétarien"
+   ],
+   "categories": [
+    "Plat"
+   ],
+   "ingredients": [
+    {
+     "text": "8 œufs"
+    },
+    {
+     "text": "800 g de tomates concassées"
+    },
+    {
+     "text": "2 poivrons rouges"
+    },
+    {
+     "text": "1 oignon"
+    },
+    {
+     "text": "2 gousses d'ail"
+    },
+    {
+     "text": "1 c. à c. de cumin"
+    },
+    {
+     "text": "1 c. à c. de paprika"
+    },
+    {
+     "text": "2 c. à s. d'huile d'olive"
+    },
+    {
+     "text": "coriandre ou persil"
+    },
+    {
+     "text": "sel, poivre"
+    },
+    {
+     "text": "pain pour servir"
+    }
+   ],
+   "steps": [
+    "Émincer l'oignon, les poivrons et l'ail, les faire fondre 8 minutes dans l'huile.",
+    "Ajouter les épices, puis les tomates, saler, poivrer et laisser épaissir 5 minutes.",
+    "Creuser 8 petits puits dans la sauce et y casser les œufs.",
+    "Couvrir et cuire 6 à 8 minutes à feu doux, jusqu'à ce que les blancs soient pris.",
+    "Parsemer d'herbes et servir dans la poêle, avec du pain."
+   ],
+   "image": {
+    "file": "images/shakshuka.jpg",
+    "author": "Calliopejen1",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Shakshuka_by_Calliopejen1.jpg"
+   }
+  },
+  {
+   "id": "tortilla-espanola",
+   "name": "Tortilla de pommes de terre",
+   "description": "L'omelette espagnole épaisse, aux pommes de terre et à l'oignon.",
+   "servings": 4,
+   "prepMinutes": 10,
+   "cookMinutes": 20,
+   "tags": [
+    "Œufs",
+    "Végétarien"
+   ],
+   "categories": [
+    "Plat"
+   ],
+   "ingredients": [
+    {
+     "text": "6 œufs"
+    },
+    {
+     "text": "600 g de pommes de terre"
+    },
+    {
+     "text": "1 oignon"
+    },
+    {
+     "text": "6 c. à s. d'huile d'olive"
+    },
+    {
+     "text": "sel"
+    }
+   ],
+   "steps": [
+    "Éplucher les pommes de terre et les couper en fines tranches, émincer l'oignon.",
+    "Les cuire 12 minutes à feu moyen dans l'huile, à couvert, en remuant de temps en temps : elles doivent être tendres sans trop dorer.",
+    "Battre les œufs avec du sel et y mélanger les pommes de terre égouttées.",
+    "Verser dans la poêle avec un peu d'huile et cuire 4 minutes à feu doux.",
+    "Retourner la tortilla à l'aide d'une assiette et cuire encore 3 minutes. Servir chaude ou tiède."
+   ],
+   "image": {
+    "file": "images/tortilla-espanola.jpg",
+    "author": "Tamorlan",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Tortilla_de_Patatas_(Corte_transversal).jpg"
+   }
+  },
+  {
+   "id": "oeufs-cocotte",
+   "name": "Œufs cocotte au jambon",
+   "description": "Des œufs au four dans des ramequins, avec crème et jambon.",
+   "servings": 4,
+   "prepMinutes": 5,
+   "cookMinutes": 12,
+   "tags": [
+    "Œufs",
+    "Rapide",
+    "Enfants"
+   ],
+   "categories": [
+    "Plat"
+   ],
+   "ingredients": [
+    {
+     "text": "8 œufs"
+    },
+    {
+     "text": "2 tranches de jambon blanc"
+    },
+    {
+     "text": "8 c. à s. de crème fraîche"
+    },
+    {
+     "text": "30 g de fromage râpé"
+    },
+    {
+     "text": "ciboulette"
+    },
+    {
+     "text": "sel, poivre"
+    },
+    {
+     "text": "mouillettes de pain grillé"
+    }
+   ],
+   "steps": [
+    "Préchauffer le four à 180 °C et faire chauffer de l'eau.",
+    "Répartir le jambon coupé en dés et une cuillère de crème dans 8 ramequins, casser un œuf dans chacun.",
+    "Saler, poivrer, parsemer de fromage.",
+    "Poser les ramequins dans un plat, verser de l'eau chaude jusqu'à mi-hauteur et cuire 10 à 12 minutes : le jaune doit rester coulant.",
+    "Parsemer de ciboulette et servir avec les mouillettes."
+   ],
+   "image": {
+    "file": "images/oeufs-cocotte.jpg",
+    "author": "Jpbrigand2",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Oeuf_cocotte.jpg"
+   }
+  },
+  {
+   "id": "saumon-papillote",
+   "name": "Saumon en papillote",
+   "description": "Le saumon cuit à la vapeur dans son papier, avec citron et légumes.",
+   "servings": 4,
+   "prepMinutes": 10,
+   "cookMinutes": 18,
+   "tags": [
+    "Poisson"
+   ],
+   "categories": [
+    "Plat"
+   ],
+   "ingredients": [
+    {
+     "text": "4 pavés de saumon"
+    },
+    {
+     "text": "1 citron"
+    },
+    {
+     "text": "1 courgette"
+    },
+    {
+     "text": "2 carottes"
+    },
+    {
+     "text": "4 brins d'aneth"
+    },
+    {
+     "text": "2 c. à s. d'huile d'olive"
+    },
+    {
+     "text": "sel, poivre"
+    },
+    {
+     "text": "riz ou pommes de terre pour servir"
+    }
+   ],
+   "steps": [
+    "Préchauffer le four à 200 °C.",
+    "Couper la courgette et les carottes en fines rondelles, le citron en tranches.",
+    "Sur 4 feuilles de papier cuisson, poser les légumes, un pavé de saumon, deux tranches de citron et un brin d'aneth. Saler, poivrer, arroser d'huile.",
+    "Fermer les papillotes et cuire 15 à 18 minutes au four.",
+    "Servir dans les papillotes ouvertes à table."
+   ],
+   "image": {
+    "file": "images/saumon-papillote.jpg",
+    "author": "Andy / Andrew Fogg from near Cambridge, UK",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Time_for_another_food_picture_-)_(4200042228).jpg"
+   }
+  },
+  {
+   "id": "saumon-teriyaki",
+   "name": "Saumon teriyaki et riz",
+   "description": "Des pavés laqués à la sauce teriyaki maison.",
+   "servings": 4,
+   "prepMinutes": 5,
+   "cookMinutes": 20,
+   "tags": [
+    "Poisson",
+    "Riz"
+   ],
+   "categories": [
+    "Plat"
+   ],
+   "ingredients": [
+    {
+     "text": "4 pavés de saumon"
+    },
+    {
+     "text": "250 g de riz"
+    },
+    {
+     "text": "6 c. à s. de sauce soja"
+    },
+    {
+     "text": "2 c. à s. de miel"
+    },
+    {
+     "text": "1 c. à s. de vinaigre de riz (ou de cidre)"
+    },
+    {
+     "text": "1 c. à c. de gingembre râpé"
+    },
+    {
+     "text": "1 c. à s. de graines de sésame"
+    },
+    {
+     "text": "1 c. à s. d'huile"
+    },
+    {
+     "text": "2 oignons nouveaux"
+    }
+   ],
+   "steps": [
+    "Cuire le riz.",
+    "Mélanger la sauce soja, le miel, le vinaigre et le gingembre.",
+    "Saisir les pavés 3 minutes côté peau dans l'huile, les retourner et cuire 2 minutes.",
+    "Verser la sauce et laisser réduire 2 à 3 minutes en arrosant le saumon.",
+    "Servir sur le riz, parsemé de sésame et d'oignons nouveaux émincés."
+   ],
+   "image": {
+    "file": "images/saumon-teriyaki.jpg",
+    "author": "Alpha from Melbourne, Australia",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Teriyaki_Salmon_Claypot_Rice_-_Claypot_King,_Glen_Waverley_(2993613849).jpg"
+   }
+  },
+  {
+   "id": "cabillaud-provencale",
+   "name": "Cabillaud à la provençale",
+   "description": "Dos de cabillaud sur une compotée de tomates, olives et herbes.",
+   "servings": 4,
+   "prepMinutes": 10,
+   "cookMinutes": 20,
+   "tags": [
+    "Poisson"
+   ],
+   "categories": [
+    "Plat"
+   ],
+   "ingredients": [
+    {
+     "text": "4 dos de cabillaud"
+    },
+    {
+     "text": "500 g de tomates cerises"
+    },
+    {
+     "text": "1 oignon"
+    },
+    {
+     "text": "2 gousses d'ail"
+    },
+    {
+     "text": "50 g d'olives noires"
+    },
+    {
+     "text": "1 c. à c. d'herbes de Provence"
+    },
+    {
+     "text": "3 c. à s. d'huile d'olive"
+    },
+    {
+     "text": "sel, poivre"
+    }
+   ],
+   "steps": [
+    "Émincer l'oignon et l'ail, les faire revenir 3 minutes dans l'huile.",
+    "Ajouter les tomates coupées en deux, les olives et les herbes, saler, poivrer et cuire 8 minutes.",
+    "Poser les dos de cabillaud sur les tomates, couvrir et cuire 8 à 10 minutes à feu doux.",
+    "Servir avec du riz ou des pommes de terre vapeur."
+   ],
+   "image": {
+    "file": "images/cabillaud-provencale.jpg",
+    "author": "Tiia Monto",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Baked_cod_fillet.jpg"
+   }
+  },
+  {
+   "id": "poisson-pane",
+   "name": "Poisson pané maison",
+   "description": "Des filets de poisson blanc panés, bien plus savoureux que ceux du commerce.",
+   "servings": 4,
+   "prepMinutes": 15,
+   "cookMinutes": 10,
+   "tags": [
+    "Poisson",
+    "Enfants"
+   ],
+   "categories": [
+    "Plat"
+   ],
+   "ingredients": [
+    {
+     "text": "600 g de filets de cabillaud ou de colin"
+    },
+    {
+     "text": "2 œufs"
+    },
+    {
+     "text": "60 g de farine"
+    },
+    {
+     "text": "100 g de chapelure"
+    },
+    {
+     "text": "4 c. à s. d'huile"
+    },
+    {
+     "text": "1 citron"
+    },
+    {
+     "text": "sel, poivre"
+    }
+   ],
+   "steps": [
+    "Couper le poisson en morceaux réguliers, saler et poivrer.",
+    "Préparer trois assiettes : la farine, les œufs battus, la chapelure.",
+    "Passer chaque morceau dans la farine, l'œuf puis la chapelure.",
+    "Faire dorer 3 à 4 minutes de chaque côté dans l'huile chaude.",
+    "Servir avec des quartiers de citron, une purée ou des légumes."
+   ],
+   "image": {
+    "file": "images/poisson-pane.jpg",
+    "author": "Aerous",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Fish_fillet_in_aluminum_tray.jpg"
+   }
+  },
+  {
+   "id": "crevettes-ail",
+   "name": "Crevettes sautées à l'ail",
+   "description": "Crevettes au beurre d'ail et persil, en 10 minutes.",
+   "servings": 4,
+   "prepMinutes": 10,
+   "cookMinutes": 6,
+   "tags": [
+    "Fruits de mer",
+    "Rapide"
+   ],
+   "categories": [
+    "Plat"
+   ],
+   "ingredients": [
+    {
+     "text": "600 g de crevettes crues décortiquées"
+    },
+    {
+     "text": "4 gousses d'ail"
+    },
+    {
+     "text": "30 g de beurre"
+    },
+    {
+     "text": "2 c. à s. d'huile d'olive"
+    },
+    {
+     "text": "1 citron"
+    },
+    {
+     "text": "persil"
+    },
+    {
+     "text": "1 pincée de piment (facultatif)"
+    },
+    {
+     "text": "sel"
+    }
+   ],
+   "steps": [
+    "Hacher l'ail et le persil.",
+    "Chauffer l'huile et le beurre dans une grande poêle, ajouter l'ail 30 secondes sans le laisser brunir.",
+    "Ajouter les crevettes, saler, et les faire sauter 2 à 3 minutes de chaque côté jusqu'à ce qu'elles soient roses.",
+    "Ajouter le persil, le jus du citron et le piment. Servir avec du riz, des pâtes ou du pain."
+   ],
+   "image": {
+    "file": "images/crevettes-ail.jpg",
+    "author": "Banej",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Gambas_Al_Ajillo_(Spanish_Garlic_Shrimp).jpg"
+   }
+  },
+  {
+   "id": "moules-marinieres",
+   "name": "Moules marinières",
+   "description": "Les moules ouvertes au vin blanc, échalotes et persil.",
+   "servings": 4,
+   "prepMinutes": 15,
+   "cookMinutes": 10,
+   "tags": [
+    "Fruits de mer"
+   ],
+   "categories": [
+    "Plat"
+   ],
+   "ingredients": [
+    {
+     "text": "2 kg de moules de bouchot"
+    },
+    {
+     "text": "3 échalotes"
+    },
+    {
+     "text": "20 cl de vin blanc sec"
+    },
+    {
+     "text": "30 g de beurre"
+    },
+    {
+     "text": "1 bouquet de persil"
+    },
+    {
+     "text": "poivre"
+    },
+    {
+     "text": "frites ou pain pour servir"
+    }
+   ],
+   "steps": [
+    "Gratter et rincer les moules, jeter celles qui sont ouvertes ou cassées.",
+    "Faire fondre les échalotes émincées dans le beurre, dans une grande cocotte, 3 minutes.",
+    "Ajouter le vin blanc et les moules, poivrer, couvrir et cuire à feu vif 5 à 6 minutes en secouant la cocotte, jusqu'à ce qu'elles soient ouvertes.",
+    "Parsemer de persil haché et servir aussitôt avec le jus."
+   ],
+   "image": {
+    "file": "images/moules-marinieres.jpg",
+    "author": "Benoît Prieur",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:Moules_marini%C3%A8res_%C3%A0_La_Rose_Blanche_(Bruxelles).jpg"
+   }
+  },
+  {
+   "id": "poke-bowl-saumon",
+   "name": "Poke bowl au saumon",
+   "description": "Un bol de riz garni de saumon cru, avocat et crudités.",
+   "servings": 4,
+   "prepMinutes": 20,
+   "cookMinutes": 10,
+   "tags": [
+    "Poisson",
+    "Riz"
+   ],
+   "categories": [
+    "Plat"
+   ],
+   "ingredients": [
+    {
+     "text": "400 g de saumon très frais (qualité sashimi)"
+    },
+    {
+     "text": "250 g de riz à sushi ou de riz rond"
+    },
+    {
+     "text": "2 avocats"
+    },
+    {
+     "text": "1/2 concombre"
+    },
+    {
+     "text": "150 g d'edamame écossés"
+    },
+    {
+     "text": "1 carotte"
+    },
+    {
+     "text": "4 c. à s. de sauce soja"
+    },
+    {
+     "text": "1 c. à s. d'huile de sésame"
+    },
+    {
+     "text": "1 c. à s. de graines de sésame"
+    }
+   ],
+   "steps": [
+    "Cuire le riz et le laisser tiédir.",
+    "Couper le saumon en dés et le mélanger avec la sauce soja et l'huile de sésame.",
+    "Couper l'avocat et le concombre en tranches, râper la carotte, cuire les edamame 3 minutes à l'eau bouillante.",
+    "Répartir le riz dans des bols, disposer le saumon et les légumes par-dessus, parsemer de sésame."
+   ],
+   "image": {
+    "file": "images/poke-bowl-saumon.jpg",
+    "author": "Andy Li",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:Salmon_Poke_Bowl_(S)_with_Spicy_mayo_sauce_-_Kitokito.jpg"
+   }
+  },
+  {
+   "id": "salade-nicoise",
+   "name": "Salade niçoise",
+   "description": "Tomates, œufs, thon, olives et anchois : une salade-repas.",
+   "servings": 4,
+   "prepMinutes": 20,
+   "cookMinutes": 10,
+   "tags": [
+    "Salade",
+    "Poisson",
+    "Œufs"
+   ],
+   "categories": [
+    "Salade"
+   ],
+   "ingredients": [
+    {
+     "text": "4 tomates"
+    },
+    {
+     "text": "4 œufs"
+    },
+    {
+     "text": "1 boîte de thon au naturel (140 g)"
+    },
+    {
+     "text": "1 poivron vert"
+    },
+    {
+     "text": "1 oignon nouveau"
+    },
+    {
+     "text": "50 g d'olives noires"
+    },
+    {
+     "text": "8 filets d'anchois (facultatif)"
+    },
+    {
+     "text": "1 salade (cœur de laitue)"
+    },
+    {
+     "text": "4 c. à s. d'huile d'olive"
+    },
+    {
+     "text": "1 c. à s. de vinaigre de vin"
+    },
+    {
+     "text": "sel, poivre"
+    }
+   ],
+   "steps": [
+    "Cuire les œufs 9 minutes dans l'eau bouillante, les refroidir et les écaler.",
+    "Couper les tomates en quartiers, le poivron et l'oignon en fines lamelles.",
+    "Disposer la salade, les légumes, le thon émietté, les œufs en quartiers, les olives et les anchois.",
+    "Arroser d'une vinaigrette huile-vinaigre, saler, poivrer."
+   ],
+   "image": {
+    "file": "images/salade-nicoise.jpg",
+    "author": "Arnaud 25",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Salade_ni%C3%A7oise_001.jpg"
+   }
+  },
+  {
+   "id": "salade-cesar",
+   "name": "Salade César",
+   "description": "Poulet doré, croûtons, parmesan et sauce crémeuse.",
+   "servings": 4,
+   "prepMinutes": 15,
+   "cookMinutes": 12,
+   "tags": [
+    "Salade",
+    "Volaille"
+   ],
+   "categories": [
+    "Salade"
+   ],
+   "ingredients": [
+    {
+     "text": "2 blancs de poulet"
+    },
+    {
+     "text": "1 salade romaine"
+    },
+    {
+     "text": "3 tranches de pain de mie"
+    },
+    {
+     "text": "50 g de parmesan en copeaux"
+    },
+    {
+     "text": "1 jaune d'œuf"
+    },
+    {
+     "text": "1 c. à c. de moutarde"
+    },
+    {
+     "text": "1 gousse d'ail"
+    },
+    {
+     "text": "1 c. à s. de jus de citron"
+    },
+    {
+     "text": "10 cl d'huile d'olive"
+    },
+    {
+     "text": "sel, poivre"
+    }
+   ],
+   "steps": [
+    "Cuire le poulet 10 minutes à la poêle avec un peu d'huile, saler, poivrer, puis le trancher.",
+    "Couper le pain en dés et le faire dorer à la poêle avec un filet d'huile.",
+    "Sauce : fouetter le jaune, la moutarde, l'ail râpé et le citron, puis ajouter l'huile en filet comme une mayonnaise. Ajouter un peu de parmesan.",
+    "Mélanger la romaine coupée avec la sauce, ajouter le poulet, les croûtons et les copeaux de parmesan."
+   ],
+   "image": {
+    "file": "images/salade-cesar.jpg",
+    "author": "Banej",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Caesar_Salad_from_Tony_Roma_Restaurant-_March_2024_02.jpg"
+   }
+  },
+  {
+   "id": "taboule",
+   "name": "Taboulé express",
+   "description": "Semoule, tomates, concombre, menthe et persil, au citron.",
+   "servings": 4,
+   "prepMinutes": 20,
+   "cookMinutes": 5,
+   "tags": [
+    "Salade",
+    "Végétarien"
+   ],
+   "categories": [
+    "Salade"
+   ],
+   "ingredients": [
+    {
+     "text": "250 g de semoule moyenne"
+    },
+    {
+     "text": "25 cl d'eau bouillante"
+    },
+    {
+     "text": "3 tomates"
+    },
+    {
+     "text": "1/2 concombre"
+    },
+    {
+     "text": "1 oignon nouveau"
+    },
+    {
+     "text": "1 bouquet de menthe"
+    },
+    {
+     "text": "1 bouquet de persil plat"
+    },
+    {
+     "text": "2 citrons"
+    },
+    {
+     "text": "5 c. à s. d'huile d'olive"
+    },
+    {
+     "text": "sel, poivre"
+    }
+   ],
+   "steps": [
+    "Verser l'eau bouillante salée sur la semoule, couvrir 5 minutes, puis égrainer à la fourchette avec 2 cuillères d'huile.",
+    "Couper les tomates et le concombre en petits dés, ciseler l'oignon et les herbes.",
+    "Mélanger le tout avec le jus des citrons et le reste d'huile. Saler, poivrer.",
+    "Servir frais (il est encore meilleur après 1 heure au réfrigérateur)."
+   ],
+   "image": {
+    "file": "images/taboule.jpg",
+    "author": "cyclonebill",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Flickr_-_cyclonebill_-_Tabbouleh.jpg"
+   }
+  },
+  {
+   "id": "salade-lentilles",
+   "name": "Salade de lentilles",
+   "description": "Lentilles vertes tièdes, carotte, échalote et vinaigrette moutardée.",
+   "servings": 4,
+   "prepMinutes": 10,
+   "cookMinutes": 20,
+   "tags": [
+    "Salade",
+    "Légumineuses",
+    "Végétarien"
+   ],
+   "categories": [
+    "Salade"
+   ],
+   "ingredients": [
+    {
+     "text": "250 g de lentilles vertes"
+    },
+    {
+     "text": "1 carotte"
+    },
+    {
+     "text": "1 échalote"
+    },
+    {
+     "text": "1 bouquet de persil"
+    },
+    {
+     "text": "1 c. à s. de moutarde"
+    },
+    {
+     "text": "2 c. à s. de vinaigre"
+    },
+    {
+     "text": "4 c. à s. d'huile"
+    },
+    {
+     "text": "sel, poivre"
+    },
+    {
+     "text": "lardons ou saucisse fumée (facultatif)"
+    }
+   ],
+   "steps": [
+    "Cuire les lentilles 20 minutes dans l'eau non salée avec la carotte coupée en petits dés. Saler en fin de cuisson et égoutter.",
+    "Préparer la vinaigrette : moutarde, vinaigre, huile, échalote ciselée, sel et poivre.",
+    "Mélanger les lentilles tièdes avec la vinaigrette et le persil haché.",
+    "Ajouter éventuellement des lardons poêlés ou une saucisse fumée en rondelles."
+   ],
+   "image": {
+    "file": "images/salade-lentilles.jpg",
+    "author": "Joey Doll",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Lentil_salad_(29308018298).jpg"
+   }
+  },
+  {
+   "id": "dahl-lentilles",
+   "name": "Dahl de lentilles corail",
+   "description": "Lentilles corail fondantes au lait de coco et aux épices douces.",
+   "servings": 4,
+   "prepMinutes": 10,
+   "cookMinutes": 20,
+   "tags": [
+    "Légumineuses",
+    "Végétarien"
+   ],
+   "categories": [
+    "Plat"
+   ],
+   "ingredients": [
+    {
+     "text": "250 g de lentilles corail"
+    },
+    {
+     "text": "40 cl de lait de coco"
+    },
+    {
+     "text": "40 cl d'eau"
+    },
+    {
+     "text": "1 oignon"
+    },
+    {
+     "text": "2 gousses d'ail"
+    },
+    {
+     "text": "1 morceau de gingembre (2 cm)"
+    },
+    {
+     "text": "1 c. à s. de curry"
+    },
+    {
+     "text": "1 c. à c. de curcuma"
+    },
+    {
+     "text": "400 g de tomates concassées"
+    },
+    {
+     "text": "1 c. à s. d'huile"
+    },
+    {
+     "text": "coriandre"
+    },
+    {
+     "text": "sel"
+    },
+    {
+     "text": "riz basmati pour servir"
+    }
+   ],
+   "steps": [
+    "Faire revenir l'oignon haché, l'ail et le gingembre râpés dans l'huile 3 minutes.",
+    "Ajouter les épices puis les lentilles rincées, les tomates, le lait de coco et l'eau. Saler.",
+    "Laisser mijoter 18 à 20 minutes en remuant de temps en temps, jusqu'à ce que les lentilles soient fondantes.",
+    "Parsemer de coriandre et servir avec le riz."
+   ],
+   "image": {
+    "file": "images/dahl-lentilles.jpg",
+    "author": "Soumendra Kumar Sahoo",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Rice_and_Dal_Makhni.jpg"
+   }
+  },
+  {
+   "id": "curry-pois-chiches",
+   "name": "Curry de pois chiches et épinards",
+   "description": "Un curry végétarien prêt en 25 minutes avec des pois chiches en boîte.",
+   "servings": 4,
+   "prepMinutes": 10,
+   "cookMinutes": 15,
+   "tags": [
+    "Légumineuses",
+    "Végétarien"
+   ],
+   "categories": [
+    "Plat"
+   ],
+   "ingredients": [
+    {
+     "text": "2 boîtes de pois chiches (2 × 400 g)"
+    },
+    {
+     "text": "200 g d'épinards frais"
+    },
+    {
+     "text": "40 cl de lait de coco"
+    },
+    {
+     "text": "400 g de tomates concassées"
+    },
+    {
+     "text": "1 oignon"
+    },
+    {
+     "text": "2 gousses d'ail"
+    },
+    {
+     "text": "2 c. à s. de pâte de curry ou de curry en poudre"
+    },
+    {
+     "text": "1 c. à s. d'huile"
+    },
+    {
+     "text": "sel"
+    },
+    {
+     "text": "riz ou naans pour servir"
+    }
+   ],
+   "steps": [
+    "Faire fondre l'oignon émincé et l'ail dans l'huile 3 minutes, ajouter le curry 1 minute.",
+    "Ajouter les tomates, le lait de coco et les pois chiches égouttés, saler et laisser mijoter 10 minutes.",
+    "Ajouter les épinards et laisser tomber 2 minutes.",
+    "Servir avec du riz ou des naans."
+   ],
+   "image": {
+    "file": "images/curry-pois-chiches.jpg",
+    "author": "Parzeus",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Chana_Masala_in_Paul%C3%ADnia,_2023-10-16.jpg"
+   }
+  },
+  {
+   "id": "semoule-merguez",
+   "name": "Semoule aux légumes et merguez",
+   "description": "Un couscous express : légumes en sauce, merguez et semoule.",
+   "servings": 4,
+   "prepMinutes": 10,
+   "cookMinutes": 20,
+   "tags": [
+    "Viande"
+   ],
+   "categories": [
+    "Plat"
+   ],
+   "ingredients": [
+    {
+     "text": "8 merguez"
+    },
+    {
+     "text": "300 g de semoule moyenne"
+    },
+    {
+     "text": "2 courgettes"
+    },
+    {
+     "text": "2 carottes"
+    },
+    {
+     "text": "1 boîte de pois chiches (400 g)"
+    },
+    {
+     "text": "400 g de tomates concassées"
+    },
+    {
+     "text": "1 oignon"
+    },
+    {
+     "text": "2 c. à c. de ras-el-hanout"
+    },
+    {
+     "text": "40 cl de bouillon de légumes"
+    },
+    {
+     "text": "2 c. à s. d'huile d'olive"
+    },
+    {
+     "text": "sel"
+    }
+   ],
+   "steps": [
+    "Couper les légumes en morceaux, émincer l'oignon.",
+    "Faire revenir l'oignon dans l'huile, ajouter les épices, les légumes, les tomates, les pois chiches égouttés et le bouillon. Laisser mijoter 18 minutes.",
+    "Pendant ce temps, cuire les merguez à la poêle.",
+    "Préparer la semoule : la couvrir du même volume d'eau bouillante salée, attendre 5 minutes et égrainer avec un filet d'huile.",
+    "Servir la semoule avec les légumes, leur bouillon et les merguez."
+   ],
+   "image": {
+    "file": "images/semoule-merguez.jpg",
+    "author": "Guilhem Vellut from Paris, France",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Couscous_with_merguez,_Icosium,_Paris_002.jpg"
+   }
+  },
+  {
+   "id": "veloute-carottes",
+   "name": "Velouté de carottes au cumin",
+   "description": "Un velouté doux et un peu épicé, lié au lait de coco.",
+   "servings": 4,
+   "prepMinutes": 10,
+   "cookMinutes": 20,
+   "tags": [
+    "Soupe",
+    "Végétarien"
+   ],
+   "categories": [
+    "Soupe"
+   ],
+   "ingredients": [
+    {
+     "text": "800 g de carottes"
+    },
+    {
+     "text": "1 pomme de terre"
+    },
+    {
+     "text": "1 oignon"
+    },
+    {
+     "text": "1 c. à c. de cumin"
+    },
+    {
+     "text": "80 cl de bouillon de légumes"
+    },
+    {
+     "text": "15 cl de lait de coco ou de crème"
+    },
+    {
+     "text": "1 c. à s. d'huile d'olive"
+    },
+    {
+     "text": "sel, poivre"
+    }
+   ],
+   "steps": [
+    "Éplucher et couper les carottes, la pomme de terre et l'oignon en morceaux.",
+    "Les faire revenir 3 minutes dans l'huile avec le cumin.",
+    "Couvrir de bouillon et cuire 18 minutes à frémissement.",
+    "Mixer avec le lait de coco, saler, poivrer."
+   ],
+   "image": {
+    "file": "images/veloute-carottes.jpg",
+    "author": "jules / stone soup",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Carrot_soup_spoon.jpg"
+   }
+  },
+  {
+   "id": "veloute-potiron",
+   "name": "Velouté de potiron",
+   "description": "Le velouté de saison, onctueux et doux.",
+   "servings": 4,
+   "prepMinutes": 10,
+   "cookMinutes": 20,
+   "tags": [
+    "Soupe",
+    "Végétarien"
+   ],
+   "categories": [
+    "Soupe"
+   ],
+   "ingredients": [
+    {
+     "text": "1 kg de potiron ou de potimarron"
+    },
+    {
+     "text": "1 pomme de terre"
+    },
+    {
+     "text": "1 oignon"
+    },
+    {
+     "text": "80 cl de bouillon de légumes"
+    },
+    {
+     "text": "10 cl de crème fraîche"
+    },
+    {
+     "text": "1 pincée de muscade"
+    },
+    {
+     "text": "1 c. à s. d'huile"
+    },
+    {
+     "text": "sel, poivre"
+    },
+    {
+     "text": "graines de courge (facultatif)"
+    }
+   ],
+   "steps": [
+    "Éplucher le potiron (le potimarron se garde avec la peau), le couper en cubes avec la pomme de terre. Émincer l'oignon.",
+    "Faire revenir l'oignon dans l'huile, ajouter les légumes et le bouillon et cuire 18 à 20 minutes.",
+    "Mixer avec la crème et la muscade, saler, poivrer.",
+    "Servir parsemé de graines de courge grillées."
+   ],
+   "image": {
+    "file": "images/veloute-potiron.jpg",
+    "author": "Cala cala_maffia",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:Autumn_Soup_(Unsplash)_cropped.jpg"
+   }
+  },
+  {
+   "id": "minestrone",
+   "name": "Minestrone express",
+   "description": "La soupe italienne aux légumes, haricots et petites pâtes.",
+   "servings": 4,
+   "prepMinutes": 10,
+   "cookMinutes": 20,
+   "tags": [
+    "Soupe",
+    "Végétarien",
+    "Légumineuses"
+   ],
+   "categories": [
+    "Soupe"
+   ],
+   "ingredients": [
+    {
+     "text": "2 carottes"
+    },
+    {
+     "text": "1 courgette"
+    },
+    {
+     "text": "1 branche de céleri"
+    },
+    {
+     "text": "1 oignon"
+    },
+    {
+     "text": "1 boîte de haricots blancs (400 g)"
+    },
+    {
+     "text": "400 g de tomates concassées"
+    },
+    {
+     "text": "80 g de petites pâtes"
+    },
+    {
+     "text": "1 l de bouillon de légumes"
+    },
+    {
+     "text": "2 c. à s. d'huile d'olive"
+    },
+    {
+     "text": "parmesan râpé"
+    },
+    {
+     "text": "sel, poivre"
+    }
+   ],
+   "steps": [
+    "Couper tous les légumes en petits dés.",
+    "Les faire revenir 5 minutes dans l'huile.",
+    "Ajouter les tomates et le bouillon, porter à ébullition, puis ajouter les pâtes et les haricots égouttés.",
+    "Cuire 10 à 12 minutes, saler, poivrer.",
+    "Servir avec du parmesan."
+   ],
+   "image": {
+    "file": "images/minestrone.jpg",
+    "author": "Katrin Morenz from Aachen, Deutschland",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Minestrone_soup.jpg"
+   }
+  },
+  {
+   "id": "crepes",
+   "name": "Crêpes",
+   "description": "La pâte à crêpes sans repos, à garnir de sucre, de confiture ou de chocolat.",
+   "servings": 4,
+   "prepMinutes": 10,
+   "cookMinutes": 20,
+   "tags": [
+    "Dessert",
+    "Enfants"
+   ],
+   "categories": [
+    "Dessert"
+   ],
+   "ingredients": [
+    {
+     "text": "250 g de farine"
+    },
+    {
+     "text": "4 œufs"
+    },
+    {
+     "text": "50 cl de lait"
+    },
+    {
+     "text": "2 c. à s. de sucre"
+    },
+    {
+     "text": "50 g de beurre fondu"
+    },
+    {
+     "text": "1 pincée de sel"
+    }
+   ],
+   "steps": [
+    "Dans un saladier, mélanger la farine, le sucre et le sel. Ajouter les œufs et fouetter en versant le lait petit à petit pour éviter les grumeaux.",
+    "Ajouter le beurre fondu.",
+    "Chauffer une poêle légèrement beurrée, verser une petite louche de pâte et l'étaler en tournant la poêle.",
+    "Cuire 1 minute de chaque côté. Recommencer jusqu'à la fin de la pâte (environ 15 crêpes)."
+   ],
+   "image": {
+    "file": "images/crepes.jpg",
+    "author": "David Monniaux",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Crepes_dsc07085.jpg"
+   }
+  },
+  {
+   "id": "pain-perdu",
+   "name": "Pain perdu",
+   "description": "Le dessert anti-gaspillage : du pain rassis doré au beurre.",
+   "servings": 4,
+   "prepMinutes": 5,
+   "cookMinutes": 10,
+   "tags": [
+    "Dessert",
+    "Enfants",
+    "Rapide"
+   ],
+   "categories": [
+    "Dessert"
+   ],
+   "ingredients": [
+    {
+     "text": "8 tranches de pain rassis ou de brioche"
+    },
+    {
+     "text": "2 œufs"
+    },
+    {
+     "text": "25 cl de lait"
+    },
+    {
+     "text": "40 g de sucre"
+    },
+    {
+     "text": "1 sachet de sucre vanillé"
+    },
+    {
+     "text": "30 g de beurre"
+    },
+    {
+     "text": "1 pincée de cannelle (facultatif)"
+    }
+   ],
+   "steps": [
+    "Battre les œufs avec le lait, le sucre, le sucre vanillé et la cannelle.",
+    "Tremper les tranches de pain quelques secondes de chaque côté.",
+    "Les faire dorer 2 à 3 minutes de chaque côté dans le beurre chaud.",
+    "Servir saupoudré de sucre, avec des fruits ou de la confiture."
+   ],
+   "image": {
+    "file": "images/pain-perdu.jpg",
+    "author": "Ocdp",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:French_toast_001.jpg"
+   }
+  },
+  {
+   "id": "compote-pommes",
+   "name": "Compote de pommes maison",
+   "description": "Des pommes fondues, un peu de cannelle, rien d'autre.",
+   "servings": 4,
+   "prepMinutes": 10,
+   "cookMinutes": 20,
+   "tags": [
+    "Dessert",
+    "Enfants"
+   ],
+   "categories": [
+    "Dessert"
+   ],
+   "ingredients": [
+    {
+     "text": "1,5 kg de pommes"
+    },
+    {
+     "text": "10 cl d'eau"
+    },
+    {
+     "text": "1 c. à s. de sucre (facultatif)"
+    },
+    {
+     "text": "1 pincée de cannelle"
+    },
+    {
+     "text": "1 sachet de sucre vanillé"
+    }
+   ],
+   "steps": [
+    "Éplucher les pommes, retirer le cœur et les couper en morceaux.",
+    "Les mettre dans une casserole avec l'eau, le sucre, la cannelle et le sucre vanillé.",
+    "Couvrir et cuire 15 à 20 minutes à feu doux en remuant de temps en temps.",
+    "Écraser à la fourchette ou mixer selon la texture voulue. Servir tiède ou froide."
+   ],
+   "image": {
+    "file": "images/compote-pommes.jpg",
+    "author": "David Benbennick",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Applesauce.jpg"
+   }
+  }
+ ]
+}

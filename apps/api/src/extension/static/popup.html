@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  body { font: 14px system-ui, sans-serif; margin: 0; width: 300px; color: #1f2933; }
+  header { display: flex; align-items: center; gap: 8px; padding: 12px 14px; background: #2f6f4f; color: #fff; font-weight: 600; }
+  header img { width: 22px; height: 22px; }
+  main { padding: 12px 14px; display: flex; flex-direction: column; gap: 10px; }
+  label { font-size: 12px; color: #52606d; display: block; margin-bottom: 4px; }
+  input { width: 100%; box-sizing: border-box; padding: 8px; border: 1px solid #cbd2d9; border-radius: 6px; font: inherit; }
+  #code { font-size: 20px; letter-spacing: 3px; text-transform: uppercase; text-align: center; }
+  button { padding: 9px 12px; border: 0; border-radius: 6px; font: inherit; cursor: pointer; background: #2f6f4f; color: #fff; }
+  button.light { background: #e4e7eb; color: #1f2933; }
+  .muted { color: #52606d; font-size: 12px; }
+  .error { color: #c62828; font-size: 13px; }
+  .ok { color: #2f6f4f; font-weight: 600; }
+  a { color: #2f6f4f; }
+  [hidden] { display: none !important; }
+</style>
+</head>
+<body>
+<header><img src="icon.png" alt=""><span>Pantarr</span></header>
+<main id="connect">
+  <div class="muted" data-t="intro"></div>
+  <div><label for="code" data-t="code"></label><input id="code" maxlength="9" autocomplete="off" spellcheck="false"></div>
+  <details id="other"><summary class="muted" data-t="other"></summary>
+    <div style="margin-top:6px"><label for="api" data-t="address"></label><input id="api" placeholder="https://"></div>
+  </details>
+  <button id="go" data-t="connect"></button>
+  <div id="error" class="error" hidden></div>
+</main>
+<main id="connected" hidden>
+  <div class="ok" data-t="connected"></div>
+  <div id="who"></div>
+  <div id="expired" class="error" hidden></div>
+  <div class="muted" data-t="howto"></div>
+  <button id="open" class="light" data-t="open"></button>
+  <button id="off" class="light" data-t="disconnect"></button>
+</main>
+<script src="popup.js"></script>
+</body>
+</html>

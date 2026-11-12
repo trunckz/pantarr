@@ -1,0 +1,372 @@
+// Pantarr database (PostgreSQL). Core tables first, then household data (planning, shopping, purchases, pantry).
+// See docs/architecture.md § 3.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ── Accounts ──
+
+enum Role {
+  ADMIN
+  USER
+}
+
+model User {
+  id           String       @id @default(cuid())
+  email        String       @unique
+  name         String
+  role         Role         @default(USER)
+  locale       String       @default("en")
+  passwordHash String?      // null for SSO-only accounts
+  oidcSubject  String?      @unique
+  disabled     Boolean      @default(false)
+  createdAt    DateTime     @default(now())
+  lastLoginAt  DateTime?
+  emailVerifiedAt DateTime?        // hosted mode: sign-in only once the address is checked
+  sessionVersion Int        @default(0)   // in every session token: raised to end all sessions (password changed, « sign out everywhere »)
+  apiKeys      ApiKey[]
+  memberships  Membership[]
+}
+
+model ApiKey {
+  id         String    @id @default(cuid())
+  name       String
+  prefix     String    @unique   // first characters, shown in the UI and used to find the key
+  hash       String              // argon2 of the full key
+  scopes     String[]            // read | write | admin | bridge
+  user       User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId     String
+  createdAt  DateTime  @default(now())
+  lastUsedAt DateTime?
+  expiresAt  DateTime?
+}
+
+// Global settings (key/value) : OIDC, registration, default locale… ; admin only
+model Setting {
+  key       String   @id
+  value     Json
+  updatedAt DateTime @updatedAt
+}
+
+// ── Households ──
+
+model Household {
+  id               String              @id @default(cuid())
+  name             String
+  locale           String              @default("en")
+  settings         Json                @default("{}")   // planning horizon, store areas, prompt template…
+  createdAt        DateTime            @default(now())
+  memberships      Membership[]
+  members          Member[]
+  connectors       ConnectorInstance[]
+  drafts           MealPlanDraft[]
+  feedback         MealFeedback[]
+  products         Product[]
+  pantryFamilies   PantryFamily[]
+  preferences      ProductPreference[]
+  purchaseRules    PurchaseRule[]
+  shoppingLinks    ShoppingItemLink[]
+  llmUsage         LlmUsage[]
+  receipts         Receipt[]
+  listLinks        ListSyncLink[]
+  shoppingItems    ShoppingItem[]
+  aisles           Aisle[]
+  // Hosted mode: plan (docs/hosted.md), subscription of the billing provider, Mealie group provisioned
+  plan                String    @default("free")
+  /** Set by a platform administrator (beta, gesture): LLM calls per month instead of the plan's. */
+  quotaOverride       Int?
+  /** Invitation code used to create it (hosted beta). */
+  signupCodeId        String?
+  planStatus          String?   // active | trialing | past_due | paused | canceled (provider's words)
+  planRenewsAt        DateTime?
+  billingProvider     String?   // paddle | stripe
+  billingCustomer     String?
+  billingSubscription String?
+  mealieGroupId       String?
+  /** Forwarding address of the household (receipts by e-mail): <inboundCode>@PANTARR_INBOUND_DOMAIN. */
+  inboundCode         String?   @unique
+  /** Last confirmation asked by a mail service before forwarding (Gmail: code and link), shown to the household. */
+  inboundConfirm      Json?
+}
+
+model Membership {
+  user        User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId      String
+  household   Household @relation(fields: [householdId], references: [id], onDelete: Cascade)
+  householdId String
+  role        String    @default("member")   // owner: manages the household (members, connectors, billing) | member
+  @@id([userId, householdId])
+}
+
+// A person who eats (not necessarily a user): dietary rules, meal rules, birth date for children
+model Member {
+  id          String    @id @default(cuid())
+  household   Household @relation(fields: [householdId], references: [id], onDelete: Cascade)
+  householdId String
+  name        String
+  kind        String    @default("adult")   // adult | child
+  birthDate   DateTime?
+  rules       String    @default("")        // free text for the LLM ("split menu: proteins at lunch…")
+  allergies   String[]  @default([])        // built-in codes (gluten, peanuts…) or household-defined names
+  diets       String[]  @default([])        // built-in codes (vegan, halal…) or household-defined names
+  position    Int       @default(0)
+}
+
+// Enabled connector of a household (or global when householdId is null)
+model ConnectorInstance {
+  id          String     @id @default(cuid())
+  household   Household? @relation(fields: [householdId], references: [id], onDelete: Cascade)
+  householdId String?
+  moduleId    String     // manifest id: mealie, gemini, intermarche…
+  kind        String
+  enabled     Boolean    @default(true)
+  settings    Json       @default("{}")
+  secrets     String?    // encrypted JSON (PANTARR_SECRET)
+  createdAt   DateTime   @default(now())
+}
+
+// ── Background jobs (LLM calls, imports) : survive page close and restarts ──
+
+model Job {
+  id          String    @id @default(cuid())
+  householdId String?
+  kind        String
+  key         String?   @unique   // idempotency: one running proposal per household and period
+  status      String    @default("queued")   // queued | running | done | failed
+  payload     Json      @default("{}")
+  result      Json?
+  error       String?
+  createdAt   DateTime  @default(now())
+  finishedAt  DateTime?
+}
+
+// ── Planning ──
+
+model MealPlanDraft {
+  id          String    @id @default(cuid())
+  household   Household @relation(fields: [householdId], references: [id], onDelete: Cascade)
+  householdId String
+  start       DateTime  @db.Date
+  days        Int
+  answer      Json      // LLM answer: meals, ingredients, batch cooking, remarks
+  validatedAt DateTime?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  @@unique([householdId, start])
+}
+
+model MealFeedback {
+  id          String    @id @default(cuid())
+  household   Household @relation(fields: [householdId], references: [id], onDelete: Cascade)
+  householdId String
+  dish        String
+  kind        String    // validated | replaced
+  at          DateTime  @default(now())
+  @@index([householdId, dish])
+}
+
+// ── Shopping (the list itself lives in Mealie) ──
+
+model ShoppingItemLink {
+  id            String    @id @default(cuid())
+  household     Household @relation(fields: [householdId], references: [id], onDelete: Cascade)
+  householdId   String
+  recipesItemId String    // id of the item in the recipes backend (Mealie)
+  origin        String    // meal | pantry | list-sync | manual
+  originRef     String?   // pantry family, list-sync item id…
+  storeArea     String    // in-store | online
+  product       String?   // habitual / preferred product proposed to the cart
+  @@unique([householdId, recipesItemId])
+}
+
+model PurchaseRule {
+  id          String    @id @default(cuid())
+  household   Household @relation(fields: [householdId], references: [id], onDelete: Cascade)
+  householdId String
+  text        String    // "Minced steak: always frozen (frozen aisle, online)"
+  position    Int       @default(0)
+}
+
+model ProductPreference {
+  id          String    @id @default(cuid())
+  household   Household @relation(fields: [householdId], references: [id], onDelete: Cascade)
+  householdId String
+  article     String    // "Water"
+  product     String    // "Native"
+  learned     Boolean   @default(false)   // chosen by hand in the cart panel (not typed in the settings)
+  updatedAt   DateTime  @default(now()) @updatedAt
+}
+
+// ── Purchases & pantry ──
+
+model Product {
+  id          String     @id @default(cuid())
+  household   Household  @relation(fields: [householdId], references: [id], onDelete: Cascade)
+  householdId String
+  label       String     // as printed (store abbreviations expanded by the connector)
+  brand       String?
+  channel     String     // online | in-store
+  connector   String     // module id
+  purchases   Purchase[]
+  @@unique([householdId, connector, label])
+}
+
+model Purchase {
+  id         String   @id @default(cuid())
+  product    Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+  productId  String
+  date       DateTime @db.Date
+  quantity   Float
+  unitPrice  Float?
+  externalId String?  // receipt / order id
+  @@index([productId, date])
+}
+
+model PantryFamily {
+  id          String        @id @default(cuid())
+  household   Household     @relation(fields: [householdId], references: [id], onDelete: Cascade)
+  householdId String
+  category    String        // Breakfast, Snack, Baby, Home & laundry…
+  name        String        // "Diapers (Zoé)"
+  aisle       String
+  keywords    String[]
+  excludes    String[]
+  forcedDays  Int?          // forced cycle instead of the estimate
+  factor      Float         @default(1)   // learned correction of the consumption rate
+  position    Int           @default(0)
+  lastSeen    DateTime?     @db.Date      // last purchase when the estimate was last computed (learning)
+  predicted   DateTime?     @db.Date      // date predicted then for the next purchase
+  events      PantryEvent[]
+}
+
+model PantryEvent {
+  id       String       @id @default(cuid())
+  family   PantryFamily @relation(fields: [familyId], references: [id], onDelete: Cascade)
+  familyId String
+  kind     String       // still-have | bought
+  at       DateTime     @default(now())
+}
+
+// ── LLM usage : what each call cost, for the quotas of the household (and its own follow-up) ──
+
+model LlmUsage {
+  id           String    @id @default(cuid())
+  household    Household @relation(fields: [householdId], references: [id], onDelete: Cascade)
+  householdId  String
+  at           DateTime  @default(now())
+  connector    String    // module id (gemini, openai…)
+  model        String
+  purpose      String    // propose | change
+  inputTokens  Int       @default(0)
+  outputTokens Int       @default(0)
+  ok           Boolean   @default(true)
+  @@index([householdId, at])
+}
+
+// ── List sync : an item of an outside list ↔ the item it became in the shopping list, with the checked states seen
+// at the last sync (to know which side changed) ──
+
+// ── Shopping list (kept by Pantarr since 11/2026 ; before, in Mealie: the items were copied with their ids) ──
+model ShoppingItem {
+  id          String    @id @default(cuid())
+  household   Household @relation(fields: [householdId], references: [id], onDelete: Cascade)
+  householdId String
+  text        String
+  checked     Boolean   @default(false)
+  aisle       String    @default("")
+  /** in-store | online ; null: from the aisle (household setting « storeAreas ») */
+  area        String?
+  /** meal | manual | pantry | list-sync | mealie (made in Mealie before) */
+  origin      String    @default("manual")
+  /** dishes it is for (« Pâtes carbonara, Pizza »), the usual product chosen, the pantry family, the sync source… */
+  extras      Json      @default("{}")
+  position    Int       @default(0)
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @default(now()) @updatedAt
+  @@index([householdId, checked])
+}
+
+// Aisles of the household (store sections), in its order ; where each one is bought: setting « storeAreas ».
+model Aisle {
+  id          String    @id @default(cuid())
+  household   Household @relation(fields: [householdId], references: [id], onDelete: Cascade)
+  householdId String
+  name        String
+  position    Int       @default(0)
+  @@unique([householdId, name])
+}
+
+model ListSyncLink {
+  id          String    @id @default(cuid())
+  household   Household @relation(fields: [householdId], references: [id], onDelete: Cascade)
+  householdId String
+  moduleId    String
+  externalId  String
+  itemId      String    // item of the shopping list
+  extChecked  Boolean   @default(false)
+  itemChecked Boolean   @default(false)
+  @@unique([householdId, moduleId, externalId])
+}
+
+// ── E-mail tokens (hosted mode): address check after sign-up, invitation to a household ──
+
+model EmailToken {
+  id          String    @id @default(cuid())
+  kind        String    // verify | invite
+  hash        String    @unique   // sha256 of the token sent by e-mail
+  email       String
+  userId      String?
+  householdId String?
+  role        String?   // invite: role given in the household (owner | member)
+  expiresAt   DateTime
+  usedAt      DateTime?
+  createdAt   DateTime  @default(now())
+}
+
+// A receipt or invoice given to Pantarr itself (photo, PDF, e-mail, online order): no document manager needed. The
+// file stays (to read it again with a better reader), its purchases are those with externalId « receipt:<id> ».
+model Receipt {
+  id          String    @id @default(cuid())
+  household   Household @relation(fields: [householdId], references: [id], onDelete: Cascade)
+  householdId String
+  source      String    // upload | email | order
+  filename    String
+  mimeType    String
+  data        Bytes
+  hash        String    // sha256 of the file: the same file twice is read once
+  status      String    @default("pending")   // pending | done | failed | empty
+  error       String?
+  store       String?
+  date        DateTime? @db.Date
+  channel     String?   // in-store | online
+  reader      String?   // intermarche | generic | llm | order
+  purchases   Int       @default(0)
+  /** Online order it belongs to (store and order number): its mails (confirmed, ready, invoice) count once. */
+  orderKey    String?
+  /** Which mail of the order (1 confirmed, 2 ready, 3 invoice): the highest one gives the purchases. */
+  orderRank   Int?
+  createdAt   DateTime  @default(now())
+  @@unique([householdId, hash])
+  @@index([householdId, orderKey])
+  @@index([householdId, createdAt])
+}
+
+// Invitation codes of a hosted instance in « code » sign-up mode (beta): a code lets a person create an account and
+// its own household, on the given plan, a given number of times, until a date.
+model SignupCode {
+  id        String    @id @default(cuid())
+  code      String    @unique   // upper case, shown to the platform administrators
+  label     String    @default("")
+  plan      String?   // plan given to the household (else « free »)
+  maxUses   Int       @default(1)
+  uses      Int       @default(0)
+  expiresAt DateTime?
+  disabled  Boolean   @default(false)
+  createdAt DateTime  @default(now())
+}

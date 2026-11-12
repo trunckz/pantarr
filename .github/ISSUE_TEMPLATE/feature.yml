@@ -1,0 +1,58 @@
+name: "💡 Feature request / Demande d'évolution"
+description: "An idea to make Pantarr better · Une idée pour améliorer Pantarr"
+title: "[Idea] "
+labels: ["enhancement", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        You can write in **English or French**. · Vous pouvez écrire en **français ou en anglais**.
+        Please search the existing tickets first and add a 👍 to the one that matches. · Cherchez d'abord parmi les tickets existants et ajoutez un 👍 à celui qui correspond.
+  - type: textarea
+    id: problem
+    attributes:
+      label: "What do you want to do, and what is in the way today? · Que voulez-vous faire, et qu'est-ce qui bloque aujourd'hui ?"
+      placeholder: "Every Sunday I rewrite the same breakfast items into the list. · Chaque dimanche je réécris les mêmes produits du petit-déjeuner."
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: "Your idea · Votre idée"
+      placeholder: "A list of items added automatically every week. · Une liste de produits ajoutés automatiquement chaque semaine."
+    validations:
+      required: false
+  - type: dropdown
+    id: area
+    attributes:
+      label: "Area · Partie concernée"
+      options:
+        - "Menus / Planning"
+        - "Shopping list / Liste de courses"
+        - "Pantry, receipts / Stock, tickets"
+        - "Recipes / Recettes (Mealie)"
+        - "Browser extension, drive basket / Extension, panier drive"
+        - "Connectors (calendar, lists, mail…) / Connecteurs (agenda, listes, mails…)"
+        - "Account, sign-in / Compte, connexion"
+        - "Installation, Docker"
+        - "Other / Autre"
+    validations:
+      required: true
+  - type: dropdown
+    id: importance
+    attributes:
+      label: "How important is it for you? · Quelle importance pour vous ?"
+      options:
+        - "Nice to have / Ce serait bien"
+        - "Useful every week / Utile chaque semaine"
+        - "Blocking: I cannot use Pantarr without it / Bloquant : impossible d'utiliser Pantarr sans"
+  - type: input
+    id: version
+    attributes:
+      label: "Pantarr version · Version"
+      placeholder: "0.1.0"
+  - type: input
+    id: mode
+    attributes:
+      label: "Instance"
+      placeholder: "self-hosted / hosted"

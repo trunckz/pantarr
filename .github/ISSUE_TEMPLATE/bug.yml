@@ -1,0 +1,85 @@
+name: "🐞 Bug / Anomalie"
+description: "Something does not work as expected · Quelque chose ne marche pas comme prévu"
+title: "[Bug] "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting! You can write in **English or French**. · Merci ! Vous pouvez écrire en **français ou en anglais**.
+        ⚠️ **Do not paste personal data** (e-mail addresses, tokens, receipts, addresses). · **Ne collez aucune donnée personnelle** (adresses, jetons, tickets de caisse).
+        A security issue? Do not open a ticket, see [SECURITY.md](https://github.com/trunckz/pantarr/blob/main/SECURITY.md). · Une faille de sécurité ? Pas de ticket, voir SECURITY.md.
+  - type: textarea
+    id: what
+    attributes:
+      label: "What happened? · Que s'est-il passé ?"
+      placeholder: "When I validate the week, the shopping list stays empty. · Quand je valide la semaine, la liste de courses reste vide."
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: "Steps to reproduce · Étapes pour reproduire"
+      value: |
+        1.
+        2.
+        3.
+    validations:
+      required: false
+  - type: textarea
+    id: expected
+    attributes:
+      label: "What did you expect? · Qu'attendiez-vous ?"
+    validations:
+      required: false
+  - type: dropdown
+    id: area
+    attributes:
+      label: "Area · Partie concernée"
+      options:
+        - "Menus / Planning"
+        - "Shopping list / Liste de courses"
+        - "Pantry, receipts / Stock, tickets"
+        - "Recipes / Recettes (Mealie)"
+        - "Browser extension, drive basket / Extension, panier drive"
+        - "Connectors (calendar, lists, mail…) / Connecteurs (agenda, listes, mails…)"
+        - "Account, sign-in / Compte, connexion"
+        - "Installation, Docker"
+        - "Other / Autre"
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: "Pantarr version · Version"
+      description: "Bottom of the side menu. · En bas du menu latéral."
+      placeholder: "0.1.0"
+    validations:
+      required: true
+  - type: input
+    id: mode
+    attributes:
+      label: "Instance"
+      description: "self-hosted (your own server · votre serveur) or hosted (service en ligne)"
+      placeholder: "self-hosted"
+  - type: input
+    id: page
+    attributes:
+      label: "Page"
+      placeholder: "/shopping"
+  - type: input
+    id: browser
+    attributes:
+      label: "Browser, device · Navigateur, appareil"
+      placeholder: "Firefox 133, Android"
+  - type: input
+    id: extension
+    attributes:
+      label: "Extension version (if used) · Version de l'extension (si utilisée)"
+      placeholder: "1.3.1"
+  - type: textarea
+    id: logs
+    attributes:
+      label: "Logs, screenshots · Journaux, captures"
+      description: "Self-hosted: `docker compose logs api --since 10m`. Remove anything personal. · Retirez tout élément personnel."
+      render: text

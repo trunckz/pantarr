@@ -1,0 +1,62 @@
+# CI of Pantarr on GitHub (pull requests of contributors, pushes to main): the same checks as .forgejo/workflows/ci.yml.
+# No secret is needed; the token is read-only.
+name: CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: npm }
+      - run: npm ci --no-audit --no-fund
+      - name: Build (SDK, API, web)
+        run: npm run build
+      - name: Lint
+        run: npm run lint
+      - name: Type checks
+        run: |
+          npm run typecheck -w @pantarr/api
+          npm run typecheck -w @pantarr/web
+      - name: Dependency audit (production, high and critical)
+        run: npm audit --omit=dev --audit-level=high
+      - name: Unit tests
+        run: |
+          npm test -w @pantarr/api -- --coverage --coverageReporters=text-summary
+          npm test -w @pantarr/web -- --coverage --coverage.reporter=text-summary
+
+  e2e:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env: { POSTGRES_USER: pantarr, POSTGRES_PASSWORD: pantarr, POSTGRES_DB: pantarr_test }
+        ports: ["5432:5432"]
+        options: --health-cmd "pg_isready -U pantarr" --health-interval 5s --health-retries 10
+    env:
+      DATABASE_URL: postgresql://pantarr:pantarr@127.0.0.1:5432/pantarr_test
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: npm }
+      - name: Install and build the API
+        run: |
+          npm ci --no-audit --no-fund
+          npm run build -w @pantarr/connector-sdk
+          cd apps/api && npx prisma generate
+      - name: Migrate
+        working-directory: apps/api
+        run: npx prisma migrate deploy
+      - name: End-to-end tests
+        run: npm run test:e2e -w @pantarr/api

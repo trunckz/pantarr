@@ -1,0 +1,68 @@
+# CI of Pantarr (Forgejo Actions, self-hosted runner « docker »): every push to main and every pull request.
+# 1. checks: install, lint, type checks, build (SDK, API, web), audit of the production dependencies, unit tests with
+#    coverage (API: Jest, web: Vitest)
+# 2. e2e: the real API against PostgreSQL (installed in the job container: the runner uses Docker's default
+#    bridge network, where service containers cannot be reached by name) and a fake Mealie
+# No secret is needed. The test server deploys a commit only when this workflow succeeded on it.
+name: CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  checks:
+    runs-on: docker
+    container: { image: "node:22-bookworm" }
+    steps:
+      - name: Checkout
+        run: |
+          git init -q .
+          git remote add origin "${FORGEJO_INTERNAL_URL}/${{ forge.repository }}.git"
+          git -c http.extraHeader="Authorization: token ${{ forge.token }}" fetch -q --depth 1 origin "${{ forge.sha }}"
+          git checkout -q FETCH_HEAD
+          git log -1 --format='%h %s'
+      - name: Install
+        run: npm ci --no-audit --no-fund
+      - name: Build (SDK, API, web)
+        run: npm run build
+      - name: "Lint (ESLint: errors fail, warnings shown)"
+        run: npm run lint
+      - name: Type checks
+        run: |
+          npm run typecheck -w @pantarr/api
+          npm run typecheck -w @pantarr/web
+      - name: Dependency audit (production, high and critical)
+        run: npm audit --omit=dev --audit-level=high
+      - name: Unit tests (with coverage, no threshold yet)
+        run: |
+          npm test -w @pantarr/api -- --coverage --coverageReporters=text-summary
+          npm test -w @pantarr/web -- --coverage --coverage.reporter=text-summary
+
+  e2e:
+    runs-on: docker
+    container: { image: "node:22-bookworm" }
+    env:
+      DATABASE_URL: postgresql://pantarr:pantarr@127.0.0.1:5432/pantarr_test
+    steps:
+      - name: Checkout
+        run: |
+          git init -q .
+          git remote add origin "${FORGEJO_INTERNAL_URL}/${{ forge.repository }}.git"
+          git -c http.extraHeader="Authorization: token ${{ forge.token }}" fetch -q --depth 1 origin "${{ forge.sha }}"
+          git checkout -q FETCH_HEAD
+      - name: Install and build the API
+        run: |
+          npm ci --no-audit --no-fund
+          npm run build -w @pantarr/connector-sdk
+          cd apps/api && npx prisma generate
+      - name: PostgreSQL
+        run: |
+          apt-get update -qq && apt-get install -y -qq postgresql > /dev/null
+          pg_ctlcluster $(ls /etc/postgresql) main start
+          su postgres -c "psql -q -c \"CREATE USER pantarr PASSWORD 'pantarr' CREATEDB\" -c 'CREATE DATABASE pantarr_test OWNER pantarr'"
+      - name: Migrate
+        working-directory: apps/api
+        run: npx prisma migrate deploy
+      - name: End-to-end tests
+        run: npm run test:e2e -w @pantarr/api

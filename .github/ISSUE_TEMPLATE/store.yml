@@ -1,0 +1,43 @@
+name: "🛒 New store or connector / Nouvelle enseigne ou connecteur"
+description: "Support for a store (drive basket, receipts) or a service (calendar, list…) · Prise en charge d'une enseigne ou d'un service"
+title: "[Store] "
+labels: ["connector", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Writing a connector yourself: [docs/connectors.md](https://github.com/trunckz/pantarr/blob/main/docs/connectors.md). · Écrire le connecteur vous-même : docs/connectors.md.
+  - type: input
+    id: name
+    attributes:
+      label: "Store or service · Enseigne ou service"
+      placeholder: "Super U Drive, Grocy, Bring!…"
+    validations:
+      required: true
+  - type: input
+    id: country
+    attributes:
+      label: "Country · Pays"
+      placeholder: "France"
+  - type: checkboxes
+    id: needs
+    attributes:
+      label: "What should Pantarr do with it? · Que devrait faire Pantarr ?"
+      options:
+        - label: "Fill the online basket · Remplir le panier en ligne"
+        - label: "Read the receipts / purchase history · Lire les tickets / l'historique d'achats"
+        - label: "Sync a shopping list · Synchroniser une liste de courses"
+        - label: "Read a calendar · Lire un agenda"
+        - label: "Other (below) · Autre (ci-dessous)"
+  - type: textarea
+    id: details
+    attributes:
+      label: "Details · Précisions"
+      description: "Where do receipts arrive (mail, app only, website)? Is there a public API? · Où arrivent les tickets (mail, appli seulement, site) ? Y a-t-il une API publique ?"
+  - type: checkboxes
+    id: help
+    attributes:
+      label: "Can you help? · Pouvez-vous aider ?"
+      options:
+        - label: "I can test with my account · Je peux tester avec mon compte"
+        - label: "I can write code · Je peux écrire du code"
